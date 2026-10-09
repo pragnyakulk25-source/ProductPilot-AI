@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProductPilot AI - Requirements</title>
+    <!-- Imports Tailwind CSS for beautiful instant styling -->
+    <script src="https://tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-white min-h-screen font-sans">
+
+    <!-- Top Navigation Bar -->
+    <nav class="bg-slate-800 p-4 border-b border-slate-700 flex justify-between items-center">
+        <h1 class="text-xl font-bold text-blue-400">ProductPilot AI</h1>
+        <span class="text-sm text-slate-400">Domain 4 • Problem 4B</span>
+    </nav>
+
+    <!-- Main Workspace Container -->
+    <main class="max-w-4xl mx-auto p-6 mt-6">
+        <div class="bg-slate-800 p-6 rounded-lg border border-slate-700 shadow-xl">
+            <h2 class="text-2xl font-semibold mb-2">01. Requirements Drafting</h2>
+            <p class="text-slate-400 mb-6">Enter your core product idea to generate structured system specs.</p>
+
+            <!-- Text Input Area for Product Idea -->
+            <div class="mb-6">
+                <label class="block text-sm font-medium mb-2">Your Product Idea</label>
+                <textarea id="product-idea" rows="3" class="w-full p-3 rounded bg-slate-950 border border-slate-700 text-white focus:outline-none focus:border-blue-500" placeholder="e.g., A college food delivery app..."></textarea>
+            </div>
+
+            <!-- Action Trigger Button -->
+            <button id="generate-btn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded mb-8 transition">
+                Generate AI Draft
+            </button>
+
+            <!-- Output Preview Box (Where the AI JSON elements will show up) -->
+            <div class="border-t border-slate-700 pt-6">
+                <h3 class="text-lg font-medium mb-4 text-slate-300">AI Generated Preview</h3>
+                <div class="bg-slate-950 p-4 rounded border border-slate-800 min-h-[150px] mb-4">
+                    <p class="text-slate-500 italic">No draft generated yet. Click generate above.</p>
+                </div>
+
+                <!-- Core Human Review Gate Buttons -->
+                <div class="flex gap-4 justify-end">
+                    <button class="bg-slate-700 hover:bg-slate-600 px-4 py-2 rounded text-sm font-medium transition">Edit</button>
+                    <button class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded text-sm font-medium transition">Regenerate</button>
+                    <button class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded text-sm font-medium transition">Approve & Continue</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
