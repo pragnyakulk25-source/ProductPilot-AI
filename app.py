@@ -78,6 +78,9 @@ def get_kpi_metrics():
 @app.route('/')
 def home():
     return render_template('productpilot-ai.html')
+@app.route('/demo')
+def demo_app():
+    return render_template('delivery.html')
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
