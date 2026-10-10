@@ -1,0 +1,390 @@
+<!doctype html>
+<html><head>
+    
+  <style id="claude-scrollbar">@layer claude-scrollbar{*{scrollbar-width:thin}html{scrollbar-color:rgb(128 128 128 / 50%) transparent}}</style><meta charset="utf8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><style>.__cwhr-sel{outline:1px solid hsl(40 70% 40%) !important;outline-offset:0;}html[data-cwhr-mode]:not(#__cwhr_),html[data-cwhr-mode] :not(#__cwhr_){cursor:url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%20.5h0A11.5%2011.5%200%200%201%2023.5%2012v0A11.5%2011.5%200%200%201%2012%2023.5H2.5a2%202%200%200%201-2-2V12A11.5%2011.5%200%200%201%2012%20.5Z'%20fill%3D'%23fff'%20stroke%3D'rgba(0%2C0%2C0%2C0.22)'%20stroke-width%3D'1'%2F%3E%3C%2Fsvg%3E") 1 23, url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACjklEQVR4AbRWS2gaURR9TGpiFTUEWpKQkA+EruqizWcRSBRT/G8KKpXiyo0ra1fVNiDFLmypFUo3iht/iO4Uay1FGwtFECl1p6KWLly4CGqrSMTY+wRFQ7WhGYd7Zu697845b+7M8B6BJh+UxcXFG3a7XeTxeHQAC+C12+1+ZLPZhHgMbp8FjLWxAkaj8U48Hg8lEomfIpEoLBaLLTKZTAd4LJFI3kD8HsZ+xGKxoMFgYI9T+JvAtUAg8FylUn3hcDj8ra0t6vLyMmKxWIhCofSAfZyDMRqXy+Wr1eqvPp/vKYjMAEZsRMDpdN6MRCKf+Xz+8cbGBm2kckIAtXShUGgKh8Mnfr9/Ybh0IKDT6a4vLS19EggE+wwGY7jmUj6TyUTQyv35+fmP0MbBexkISKVS+97e3u1LsU0oAo67Go3G1i/pCZjN5t3Nzc0H/zPzPlH/ip8EWvbQYrHs4hwWmN3e3n62traGfZy7MtbX12fYbPYTIKIQOzs7C6urq/cgINVWVlaO4EtjEXq9nken06mksgMZtJthtVp5xNzcHBsEIEWu0Wg0RKVS2USz2WTigFx6hPCkMTfRarXgB6WQzd/j63Q6bdK+nB7j0KnRaCCCIMpTE4D2oEql8m1qAvV6/VSr1U5PIJvN+qFjv6fyBIVC4ZfD4XgJAmekC9RqNZROp1+FQqESCCDSBWCVO1EoFC8wOQZpAnjm0Wj0O/xX94H4HNAzotvtNnreFU6lUgllMplAMpnclcvlp8NURC6Xi8BLGc5N9NvtNqpWq6hcLqN8Pn8OLUkAMe/g4EAOG4WzizcTJpPpA6zFIpfL9Ra2I45/IRgM2lKp1LtisXjs9XpvHR4eHimVythF4n78BwAA//8r8OPFAAAABklEQVQDAPCY8Oae0TJxAAAAAElFTkSuQmCC") 1 23, default !important;}html[data-cwhr-mode][data-cwhr-composing]:not(#__cwhr_),html[data-cwhr-mode][data-cwhr-composing] :not(#__cwhr_){cursor:default !important;}</style></head><body id="artifacts-component-root-html">
+<title>Hackathon Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<style>
+/* Layout: sticky header with project identity, tab row for the four sections, one working panel at a time. Each panel has an input side and an output side. */
+:root{
+  --bg:#f1f4f7; --surface:#ffffff; --surface2:#e9eef3; --ink:#12202c; --muted:#566878; --line:#d5dde5;
+  --accent:#1f5fcf; --accent-ink:#ffffff; --ok:#17794a; --warn:#9a5b00; --crit:#b3261e; --idle:#6b7b89;
+  --ok-bg:#dff3e8; --warn-bg:#fbeccd; --crit-bg:#f9dedb; --idle-bg:#e3e9ee;
+  --font:'Instrument Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0e151b; --surface:#16202a; --surface2:#1e2b37; --ink:#e5ecf2; --muted:#92a3b2; --line:#283643;
+  --accent:#6ba4ff; --accent-ink:#0b1622; --ok:#58d08f; --warn:#f0b659; --crit:#ff8b80; --idle:#8a9aa8;
+  --ok-bg:#12301f; --warn-bg:#35270c; --crit-bg:#391a17; --idle-bg:#212e39; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#0e151b; --surface:#16202a; --surface2:#1e2b37; --ink:#e5ecf2; --muted:#92a3b2; --line:#283643;
+  --accent:#6ba4ff; --accent-ink:#0b1622; --ok:#58d08f; --warn:#f0b659; --crit:#ff8b80; --idle:#8a9aa8;
+  --ok-bg:#12301f; --warn-bg:#35270c; --crit-bg:#391a17; --idle-bg:#212e39; color-scheme:dark;}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.5;padding-inline:16px;padding-block:20px 48px}
+.wrap{max-width:1040px;margin-inline:auto;display:flex;flex-direction:column;gap:20px}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{text-wrap:balance;letter-spacing:-0.01em}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.label{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+
+header.top{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:flex-end}
+.ident{min-width:0;flex:1 1 320px;display:flex;flex-direction:column;gap:4px}
+.name{font-size:clamp(24px,5vw,34px);font-weight:700;letter-spacing:-0.02em;width:100%;background:transparent;border:0;border-bottom:1px dashed var(--line);padding:2px 0;min-width:0}
+.name:hover{border-bottom-color:var(--muted)}
+.progress{display:flex;flex-direction:column;gap:6px;min-width:200px}
+.meter{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+.meter i{height:8px;background:var(--surface2);border-radius:2px;display:block}
+.meter i.on{background:var(--accent)}
+
+nav.tabs{display:flex;gap:4px;overflow-x:auto;border-bottom:1px solid var(--line)}
+nav.tabs button{background:none;border:0;border-bottom:3px solid transparent;padding:10px 14px;cursor:pointer;white-space:nowrap;color:var(--muted);font-weight:500;display:flex;gap:8px;align-items:center}
+nav.tabs button .n{font-family:var(--mono);font-size:12px}
+nav.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent);font-weight:600}
+nav.tabs button:hover{color:var(--ink)}
+
+.panel{display:flex;flex-direction:column;gap:20px}
+.panel[hidden]{display:none}
+.grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:20px}
+@media (max-width:760px){.grid2{grid-template-columns:minmax(0,1fr)}}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.box h2{font-size:17px}
+.box p.help{color:var(--muted);font-size:13.5px}
+textarea,input[type=text],select{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:9px 11px;min-width:0}
+textarea{min-height:140px;resize:vertical;font-family:var(--mono);font-size:13px;line-height:1.55}
+textarea.prose{font-family:var(--font);font-size:15px;min-height:96px}
+.field{display:flex;flex-direction:column;gap:6px}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.btn{background:var(--accent);color:var(--accent-ink);border:0;border-radius:6px;padding:8px 14px;font-weight:600;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);font-weight:500}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost:hover{background:var(--surface2);filter:none}
+
+.pill{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11.5px;padding:3px 9px;border-radius:99px;background:var(--idle-bg);color:var(--idle);white-space:nowrap}
+.pill::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.pill.ok{background:var(--ok-bg);color:var(--ok)}
+.pill.warn{background:var(--warn-bg);color:var(--warn)}
+.pill.crit{background:var(--crit-bg);color:var(--crit)}
+.pill.ex{background:var(--warn-bg);color:var(--warn)}
+.pill.ex::before{display:none}
+
+.pipe{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.step h3{font-size:15px}
+.step p{font-size:13px;color:var(--muted);flex:1}
+.step .row{justify-content:space-between}
+.linkbtn{background:none;border:0;color:var(--accent);cursor:pointer;padding:0;font-weight:600}
+.linkbtn:hover{text-decoration:underline}
+
+.notice{border:1px solid var(--line);background:var(--surface2);border-radius:8px;padding:12px 14px;font-size:13.5px;color:var(--muted)}
+.notice strong{color:var(--ink)}
+
+.empty{border:1px dashed var(--line);border-radius:8px;padding:28px 18px;text-align:center;color:var(--muted);display:flex;flex-direction:column;gap:4px;align-items:center}
+.empty strong{color:var(--ink)}
+
+ol.reqs,ul.plain{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+ol.reqs li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;padding:10px 12px;background:var(--bg);border:1px solid var(--line);border-radius:6px}
+ol.reqs .id{font-family:var(--mono);font-size:12px;color:var(--accent);padding-top:2px}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px 12px;overflow-wrap:anywhere}
+.card.story{border-left:3px solid var(--accent)}
+.card.test{border-left:3px solid var(--ok)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.cols h3{font-size:14px;margin-bottom:8px;display:flex;justify-content:space-between;gap:8px;align-items:center}
+.stack{display:flex;height:12px;border-radius:3px;overflow:hidden;background:var(--surface2)}
+.stack span{display:block;height:100%}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--muted)}
+.legend b{color:var(--ink);font-variant-numeric:tabular-nums}
+.dot{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px}
+.fbitem{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:start}
+@media (prefers-reduced-motion:no-preference){.btn,nav.tabs button{transition:background .15s,color .15s,filter .15s}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="ident">
+      <span class="label">Hackathon project</span>
+      <input class="name" id="name" type="text" maxlength="80" placeholder="Name your project" aria-label="Project name">
+    </div>
+    <div class="progress">
+      <span class="label" id="progressLabel">4 of 4 sections have data</span>
+      <div class="meter" id="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
+      <div class="row"><button class="btn" id="exportBtn" type="button">Export with my data</button><span class="label" id="exportMsg" role="status"></span></div>
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Dashboard sections">
+    <button role="tab" id="tab-overview" aria-selected="false" data-tab="overview"><span class="n">1</span>Overview</button>
+    <button role="tab" id="tab-req" aria-selected="false" data-tab="req"><span class="n">2</span>Requirements</button>
+    <button role="tab" id="tab-us" aria-selected="false" data-tab="us"><span class="n">3</span>User Stories and Test Cases</button>
+    <button role="tab" id="tab-fb" aria-selected="true" data-tab="fb"><span class="n">4</span>Feedback Analysis</button>
+  </nav>
+
+  <!-- 1 Overview -->
+  <section class="panel" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview" hidden="">
+    <div class="grid2">
+      <div class="box">
+        <h2>About this project</h2>
+        <div class="field">
+          <label class="label" for="intro">Short introduction</label>
+          <textarea class="prose" id="intro" placeholder="What does the project do, and who is it for? Two or three sentences."></textarea>
+        </div>
+        <div class="field">
+          <label class="label" for="stage">Development status</label>
+          <select id="stage">
+            <option>Planning</option>
+            <option>Building</option>
+            <option>Integrating teammates' work</option>
+            <option>Demo ready</option>
+          </select>
+        </div>
+      </div>
+      <div class="box">
+        <h2>Workflow sections</h2>
+        <p class="help">Each section shows output from the matching feature your team has built. A section turns green once you paste that output in.</p>
+        <div class="pipe" id="pipe"><div class="step"><div class="row"><span class="label">Step 1</span><span class="pill ok">Filled in</span></div><h3>Overview</h3><p>Name, introduction and status of the project.</p></div><div class="step"><div class="row"><span class="label">Step 2</span><span class="pill ok">Data connected</span></div><h3>Requirements</h3><p>Requirements analyzed from a product idea.</p><button class="linkbtn" data-go="req" style="text-align:left">Open section</button></div><div class="step"><div class="row"><span class="label">Step 3</span><span class="pill ok">Data connected</span></div><h3>User Stories and Test Cases</h3><p>Output of your AI workflow.</p><button class="linkbtn" data-go="us" style="text-align:left">Open section</button></div><div class="step"><div class="row"><span class="label">Step 4</span><span class="pill ok">Data connected</span></div><h3>Feedback Analysis</h3><p>Feedback and priorities from your team.</p><button class="linkbtn" data-go="fb" style="text-align:left">Open section</button></div></div>
+      </div>
+    </div>
+    <div class="notice"><strong>Honest status.</strong> This dashboard does not run any AI itself. Sections 2 to 4 display what your teammates' workflow produced, and show "Waiting" until you paste it in.</div>
+  </section>
+
+  <!-- 2 Requirements -->
+  <section class="panel" id="panel-req" role="tabpanel" aria-labelledby="tab-req" hidden="">
+    <div class="grid2">
+      <div class="box">
+        <h2>Product idea</h2>
+        <p class="help">Enter the idea your workflow analyzes, then paste the requirements it returned. One requirement per line.</p>
+        <div class="field">
+          <label class="label" for="idea">Product idea</label>
+          <textarea class="prose" id="idea" placeholder="Example: A mobile app that helps students plan study sessions."></textarea>
+        </div>
+        <div class="field">
+          <label class="label" for="reqIn">Requirements output</label>
+          <textarea id="reqIn" placeholder="Users can create an account
+The app sends a reminder before each session
+Study plans can be shared with a friend"></textarea>
+        </div>
+        <div class="row"><button class="btn" data-show="req">Show requirements</button><button class="btn ghost" data-example="req">Fill example</button><button class="btn ghost" data-clear="req">Clear</button></div>
+      </div>
+      <div class="box" id="reqOut"><div class="row" style="justify-content:space-between"><h2>Analyzed requirements</h2><span class="pill ok">13 found</span></div><div><div class="label">Product idea</div><p>A student food delivery app designed for college students to order affordable meals and snacks from nearby restaurants and campus food outlets. Students can browse menus, compare prices, place orders, make payments, and track their deliveries. The app focuses on affordable food, quick delivery to college campuses and hostels, and a simple, convenient ordering experience for students.</p></div><ol class="reqs"><li><span class="id">R01</span><span>Students can create an account and log in securely.</span></li><li><span class="id">R02</span><span>Students can browse nearby restaurants and campus food outlets.</span></li><li><span class="id">R03</span><span>Students can view food menus, prices, and descriptions.</span></li><li><span class="id">R04</span><span>Students can search for food items and filter them by category.</span></li><li><span class="id">R05</span><span>Students can add food items to their cart and update quantities.</span></li><li><span class="id">R06</span><span>Students can place food orders and select a delivery location.</span></li><li><span class="id">R07</span><span>Students can make payments using available payment methods.</span></li><li><span class="id">R08</span><span>Students can track their order status in real time, where supported.</span></li><li><span class="id">R09</span><span>Students can receive notifications about order confirmation and delivery updates.</span></li><li><span class="id">R10</span><span>Students can view their previous orders and reorder meals.</span></li><li><span class="id">R11</span><span>The app displays affordable meal options suitable for student budgets.</span></li><li><span class="id">R12</span><span>Restaurant partners can manage menus and update food availability.</span></li><li><span class="id">R13</span><span>Delivery partners can view assigned orders and update delivery status.</span></li></ol></div>
+    </div>
+  </section>
+
+  <!-- 3 User stories + tests -->
+  <section class="panel" id="panel-us" role="tabpanel" aria-labelledby="tab-us" hidden="">
+    <div class="grid2">
+      <div class="box">
+        <h2>Workflow output</h2>
+        <p class="help">Paste the generated text. Lines starting with "As a" become user stories. Lines starting with "Given", "Test" or "TC" become test cases.</p>
+        <div class="field">
+          <label class="label" for="usIn">User stories and test cases</label>
+          <textarea id="usIn" style="min-height:220px" placeholder="As a student, I want reminders so that I never miss a session
+Given a session at 5 pm, when it is 4:45 pm, then a reminder is sent"></textarea>
+        </div>
+        <div class="row"><button class="btn" data-show="us">Show output</button><button class="btn ghost" data-example="us">Fill example</button><button class="btn ghost" data-clear="us">Clear</button></div>
+      </div>
+      <div class="box" id="usOut"><div class="row" style="justify-content:space-between"><h2>Generated output</h2><span class="pill ok">7 stories, 6 tests</span></div><div class="cols"><div><h3>User stories<span class="label">7</span></h3><ul class="plain"><li class="card story">As a student, I want to browse nearby restaurants so that I can find food available near my college.</li><li class="card story">As a student, I want to view food prices and menus so that I can choose affordable meals.</li><li class="card story">As a student, I want to add food items to my cart so that I can order multiple items together.</li><li class="card story">As a student, I want to place an order so that I can get food delivered to my college or hostel.</li><li class="card story">As a student, I want to track my order status so that I know when my food will arrive.</li><li class="card story">As a student, I want to receive order notifications so that I know when my order is confirmed and delivered.</li><li class="card story">As a restaurant partner, I want to update food availability so that students see the items currently available.</li></ul></div><div><h3>Test cases<span class="label">6</span></h3><ul class="plain"><li class="card test">Given a student opens the restaurant list, When nearby restaurants are available, Then the app displays restaurant names and menus.</li><li class="card test">Given a student adds a food item to the cart, When the cart is opened, Then the selected item, quantity, and price are displayed correctly.</li><li class="card test">Given a student places a valid order, When the order is confirmed, Then the app displays an order confirmation.</li><li class="card test">Given a student opens order tracking, When the order status changes, Then the app displays the latest available status.</li><li class="card test">Given a restaurant marks an item unavailable, When students view the updated menu, Then the item is shown as unavailable.</li><li class="card test">Given a student enters invalid login details, When they attempt to log in, Then the app displays an appropriate error message.</li></ul></div></div></div>
+    </div>
+  </section>
+
+  <!-- 4 Feedback -->
+  <section class="panel" id="panel-fb" role="tabpanel" aria-labelledby="tab-fb">
+    <div class="grid2">
+      <div class="box">
+        <h2>Feedback input</h2>
+        <p class="help">One feedback item per line. Include the word High, Medium or Low to set its priority. Items without one show as Unrated.</p>
+        <div class="field">
+          <label class="label" for="fbIn">Feedback and priorities</label>
+          <textarea id="fbIn" style="min-height:220px" placeholder="High: reminders arrive too late
+Medium: add a dark theme
+Low: change the logo colour"></textarea>
+        </div>
+        <div class="row"><button class="btn" data-show="fb">Show analysis</button><button class="btn ghost" data-example="fb">Fill example</button><button class="btn ghost" data-clear="fb">Clear</button></div>
+      </div>
+      <div class="box" id="fbOut"><div class="row" style="justify-content:space-between"><h2>Feedback analysis</h2><span class="pill ok">9 items</span></div><div class="stack" role="img" aria-label="Feedback by priority"><span style="width:33.33333333333333%;background:var(--crit)"></span><span style="width:33.33333333333333%;background:var(--warn)"></span><span style="width:33.33333333333333%;background:var(--ok)"></span></div><div class="legend"><span><i class="dot" style="background:var(--crit)"></i>High <b>3</b></span><span><i class="dot" style="background:var(--warn)"></i>Medium <b>3</b></span><span><i class="dot" style="background:var(--ok)"></i>Low <b>3</b></span><span><i class="dot" style="background:var(--idle)"></i>Unrated <b>0</b></span></div><ul class="plain"><li class="card fbitem"><span class="pill crit">High</span><span>Food delivery takes too long to reach college hostels.</span></li><li class="card fbitem"><span class="pill crit">High</span><span>Food prices and delivery charges are too expensive for students.</span></li><li class="card fbitem"><span class="pill crit">High</span><span>Students need accurate order tracking and delivery updates.</span></li><li class="card fbitem"><span class="pill warn">Medium</span><span>Add affordable student meal combos and discounts.</span></li><li class="card fbitem"><span class="pill warn">Medium</span><span>Provide more vegetarian food options.</span></li><li class="card fbitem"><span class="pill warn">Medium</span><span>Allow students to schedule food orders before class breaks.</span></li><li class="card fbitem"><span class="pill ok">Low</span><span>Add a dark mode to the app.</span></li><li class="card fbitem"><span class="pill ok">Low</span><span>Allow users to customize the app theme.</span></li><li class="card fbitem"><span class="pill ok">Low</span><span>Add more color options to the app logo.</span></li></ul></div>
+    </div>
+  </section>
+</div>
+
+<script>
+(function(){
+  var KEY='hackathon-dashboard-v1';
+  /*SNAPSHOT_START*/var SNAPSHOT={"name":"ProductPilot AI","intro":"ProductPilot AI is an AI-powered product management assistant that helps product teams manage tasks across the software development lifecycle. It aims to simplify requirements analysis, user story and test case generation, and customer feedback prioritization in one place. It is designed for product managers and software development teams to improve productivity and organize their workflow.","stage":"Planning","idea":"A student food delivery app designed for college students to order affordable meals and snacks from nearby restaurants and campus food outlets. Students can browse menus, compare prices, place orders, make payments, and track their deliveries. The app focuses on affordable food, quick delivery to college campuses and hostels, and a simple, convenient ordering experience for students.","req":"Students can create an account and log in securely.\nStudents can browse nearby restaurants and campus food outlets.\nStudents can view food menus, prices, and descriptions.\nStudents can search for food items and filter them by category.\nStudents can add food items to their cart and update quantities.\nStudents can place food orders and select a delivery location.\nStudents can make payments using available payment methods.\nStudents can track their order status in real time, where supported.\nStudents can receive notifications about order confirmation and delivery updates.\nStudents can view their previous orders and reorder meals.\nThe app displays affordable meal options suitable for student budgets.\nRestaurant partners can manage menus and update food availability.\nDelivery partners can view assigned orders and update delivery status.","us":"As a student, I want to browse nearby restaurants so that I can find food available near my college.\n\nAs a student, I want to view food prices and menus so that I can choose affordable meals.\n\nAs a student, I want to add food items to my cart so that I can order multiple items together.\n\nAs a student, I want to place an order so that I can get food delivered to my college or hostel.\n\nAs a student, I want to track my order status so that I know when my food will arrive.\n\nAs a student, I want to receive order notifications so that I know when my order is confirmed and delivered.\n\nAs a restaurant partner, I want to update food availability so that students see the items currently available.\n\nGiven a student opens the restaurant list, When nearby restaurants are available, Then the app displays restaurant names and menus.\n\nGiven a student adds a food item to the cart, When the cart is opened, Then the selected item, quantity, and price are displayed correctly.\n\nGiven a student places a valid order, When the order is confirmed, Then the app displays an order confirmation.\n\nGiven a student opens order tracking, When the order status changes, Then the app displays the latest available status.\n\nGiven a restaurant marks an item unavailable, When students view the updated menu, Then the item is shown as unavailable.\n\nGiven a student enters invalid login details, When they attempt to log in, Then the app displays an appropriate error message.","fb":"High: Food delivery takes too long to reach college hostels.\nHigh: Food prices and delivery charges are too expensive for students.\nHigh: Students need accurate order tracking and delivery updates.\nMedium: Add affordable student meal combos and discounts.\nMedium: Provide more vegetarian food options.\nMedium: Allow students to schedule food orders before class breaks.\nLow: Add a dark mode to the app.\nLow: Allow users to customize the app theme.\nLow: Add more color options to the app logo.","ex":{},"savedAt":1791620553403};/*SNAPSHOT_END*/
+  var S={name:'',intro:'',stage:'Planning',idea:'',req:'',us:'',fb:'',ex:{},savedAt:0};
+  if(SNAPSHOT&&typeof SNAPSHOT==='object')S=Object.assign(S,SNAPSHOT);
+  try{var raw=localStorage.getItem(KEY);if(raw){var L=JSON.parse(raw);if(!SNAPSHOT||(L.savedAt||0)>(S.savedAt||0))S=Object.assign(S,L);}}catch(e){}
+  function save(){S.savedAt=Date.now();try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+  function $(id){return document.getElementById(id);}
+  function esc(t){return String(t).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  function lines(t){return String(t||'').split(/\r?\n/).map(function(l){return l.replace(/^\s*(?:[-*•]|\d+[.)])\s*/,'').trim();}).filter(Boolean);}
+
+  var EXAMPLES={
+    req:'Users can create an account and sign in\nThe app sends a reminder before each study session\nStudy plans can be shared with a friend\nThe app works offline for saved plans',
+    us:'As a student, I want a reminder before each session so that I never miss one\nAs a student, I want to share my plan so that a friend can study with me\nGiven a session at 5 pm, when the time is 4:45 pm, then a reminder is sent\nTest: a shared plan opens on the friend\'s account without a sign-in error',
+    fb:'High: reminders arrive too late to be useful\nMedium: add a dark theme\nMedium: let me edit a session after creating it\nLow: change the logo colour'
+  };
+  var SECTIONS=[
+    {k:'overview',t:'Overview',d:'Name, introduction and status of the project.'},
+    {k:'req',t:'Requirements',d:'Requirements analyzed from a product idea.'},
+    {k:'us',t:'User Stories and Test Cases',d:'Output of your AI workflow.'},
+    {k:'fb',t:'Feedback Analysis',d:'Feedback and priorities from your team.'}
+  ];
+  function hasData(k){
+    if(k==='overview')return !!(S.name.trim()||S.intro.trim());
+    return !!String(S[k]||'').trim();
+  }
+  function exBadge(k){return S.ex[k]?'<span class="pill ex">Example data</span>':'';}
+
+  function renderPipe(){
+    var n=0;
+    $('pipe').innerHTML=SECTIONS.map(function(s,i){
+      var on=hasData(s.k); if(on)n++;
+      var label=s.k==='overview'?(on?'Filled in':'Waiting'):(on?'Data connected':'Waiting for output');
+      return '<div class="step"><div class="row"><span class="label">Step '+(i+1)+'</span><span class="pill '+(on?'ok':'')+'">'+label+'</span></div><h3>'+esc(s.t)+'</h3><p>'+esc(s.d)+'</p>'+(s.k==='overview'?'':'<button class="linkbtn" data-go="'+s.k+'" style="text-align:left">Open section</button>')+'</div>';
+    }).join('');
+    var m=$('meter').children;
+    for(var i=0;i<4;i++)m[i].className=i<n?'on':'';
+    $('progressLabel').textContent=n+' of 4 sections have data';
+  }
+
+  function emptyState(title,body){
+    return '<div class="empty"><strong>'+esc(title)+'</strong><span>'+esc(body)+'</span></div>';
+  }
+
+  function renderReq(){
+    var items=lines(S.req), out=$('reqOut');
+    var head='<div class="row" style="justify-content:space-between"><h2>Analyzed requirements</h2>'+(items.length?'<span class="pill ok">'+items.length+' found</span>':'<span class="pill">Waiting</span>')+exBadge('req')+'</div>';
+    if(!items.length){out.innerHTML=head+emptyState('No requirements yet','Paste the output from your requirements workflow on the left, then choose Show requirements.');return;}
+    var idea=S.idea.trim()?'<div><div class="label">Product idea</div><p>'+esc(S.idea)+'</p></div>':'';
+    out.innerHTML=head+idea+'<ol class="reqs">'+items.map(function(t,i){return '<li><span class="id">R'+String(i+1).padStart(2,'0')+'</span><span>'+esc(t)+'</span></li>';}).join('')+'</ol>';
+  }
+
+  function renderUS(){
+    var all=lines(S.us), out=$('usOut'), st=[], tc=[], other=[];
+    all.forEach(function(l){
+      if(/^as an? /i.test(l))st.push(l);
+      else if(/^(given|test|tc)\b/i.test(l))tc.push(l);
+      else other.push(l);
+    });
+    var head='<div class="row" style="justify-content:space-between"><h2>Generated output</h2>'+(all.length?'<span class="pill ok">'+st.length+' stories, '+tc.length+' tests</span>':'<span class="pill">Waiting</span>')+exBadge('us')+'</div>';
+    if(!all.length){out.innerHTML=head+emptyState('No output yet','Run your AI workflow, paste its stories and test cases on the left, then choose Show output.');return;}
+    function col(title,arr,cls){return '<div><h3>'+title+'<span class="label">'+arr.length+'</span></h3>'+(arr.length?'<ul class="plain">'+arr.map(function(t){return '<li class="card '+cls+'">'+esc(t)+'</li>';}).join('')+'</ul>':'<div class="label">None found</div>')+'</div>';}
+    out.innerHTML=head+'<div class="cols">'+col('User stories',st,'story')+col('Test cases',tc,'test')+'</div>'+(other.length?'<div><h3 style="font-size:14px;margin-bottom:8px">Unsorted lines</h3><ul class="plain">'+other.map(function(t){return '<li class="card">'+esc(t)+'</li>';}).join('')+'</ul></div>':'');
+  }
+
+  var PRI=[
+    {k:'High',c:'var(--crit)',re:/\b(high|critical|urgent|p0|p1)\b/i,cls:'crit'},
+    {k:'Medium',c:'var(--warn)',re:/\b(medium|med|p2)\b/i,cls:'warn'},
+    {k:'Low',c:'var(--ok)',re:/\b(low|minor|p3)\b/i,cls:'ok'},
+    {k:'Unrated',c:'var(--idle)',re:null,cls:''}
+  ];
+  function renderFB(){
+    var all=lines(S.fb), out=$('fbOut');
+    var head='<div class="row" style="justify-content:space-between"><h2>Feedback analysis</h2>'+(all.length?'<span class="pill ok">'+all.length+' items</span>':'<span class="pill">Waiting</span>')+exBadge('fb')+'</div>';
+    if(!all.length){out.innerHTML=head+emptyState('No feedback yet','Paste feedback items on the left, then choose Show analysis. Priorities are read from the words High, Medium and Low.');return;}
+    var groups=PRI.map(function(p){return {p:p,items:[]};});
+    all.forEach(function(l){
+      var g=groups[3];
+      for(var i=0;i<3;i++){if(PRI[i].re.test(l)){g=groups[i];break;}}
+      var txt=l.replace(/^\s*(high|critical|urgent|medium|med|low|minor|p[0-3])\s*[:\-–|]\s*/i,'');
+      g.items.push(txt);
+    });
+    var total=all.length;
+    var bar='<div class="stack" role="img" aria-label="Feedback by priority">'+groups.map(function(g){return g.items.length?'<span style="width:'+(g.items.length/total*100)+'%;background:'+g.p.c+'"></span>':'';}).join('')+'</div>';
+    var legend='<div class="legend">'+groups.map(function(g){return '<span><i class="dot" style="background:'+g.p.c+'"></i>'+g.p.k+' <b>'+g.items.length+'</b></span>';}).join('')+'</div>';
+    var list='<ul class="plain">'+groups.map(function(g){return g.items.map(function(t){return '<li class="card fbitem"><span class="pill '+g.p.cls+'">'+g.p.k+'</span><span>'+esc(t)+'</span></li>';}).join('');}).join('')+'</ul>';
+    out.innerHTML=head+bar+legend+list;
+  }
+
+  function renderAll(){renderPipe();renderReq();renderUS();renderFB();}
+
+  function showTab(k){
+    SECTIONS.forEach(function(s){
+      var sel=s.k===k;
+      $('panel-'+s.k).hidden=!sel;
+      $('tab-'+s.k).setAttribute('aria-selected',sel?'true':'false');
+    });
+  }
+
+  // init values
+  $('name').value=S.name; $('intro').value=S.intro; $('stage').value=S.stage; $('idea').value=S.idea;
+  $('reqIn').value=S.req; $('usIn').value=S.us; $('fbIn').value=S.fb;
+
+  $('name').addEventListener('input',function(){S.name=this.value;save();renderPipe();});
+  $('intro').addEventListener('input',function(){S.intro=this.value;save();renderPipe();});
+  $('stage').addEventListener('change',function(){S.stage=this.value;save();});
+  $('idea').addEventListener('input',function(){S.idea=this.value;save();});
+
+  var INPUT={req:'reqIn',us:'usIn',fb:'fbIn'};
+  var RENDER={req:renderReq,us:renderUS,fb:renderFB};
+  document.addEventListener('click',function(e){
+    var t=e.target.closest('button'); if(!t)return;
+    if(t.dataset.tab){showTab(t.dataset.tab);return;}
+    if(t.dataset.go){showTab(t.dataset.go);return;}
+    var k;
+    if(t.dataset.show){k=t.dataset.show;var v=$(INPUT[k]).value;S[k]=v;if(S.ex[k]&&v!==EXAMPLES[k])delete S.ex[k];save();RENDER[k]();renderPipe();}
+    if(t.dataset.example){k=t.dataset.example;$(INPUT[k]).value=EXAMPLES[k];S[k]=EXAMPLES[k];S.ex[k]=true;save();RENDER[k]();renderPipe();}
+    if(t.dataset.clear){k=t.dataset.clear;$(INPUT[k]).value='';S[k]='';delete S.ex[k];if(k==='req'){S.idea='';$('idea').value='';}save();RENDER[k]();renderPipe();}
+  });
+  document.querySelector('nav.tabs').addEventListener('keydown',function(e){
+    if(e.key!=='ArrowRight'&&e.key!=='ArrowLeft')return;
+    var ks=SECTIONS.map(function(s){return s.k;});
+    var cur=ks.findIndex(function(k){return $('tab-'+k).getAttribute('aria-selected')==='true';});
+    var nx=(cur+(e.key==='ArrowRight'?1:-1)+ks.length)%ks.length;
+    showTab(ks[nx]);$('tab-'+ks[nx]).focus();
+  });
+
+  // ---- Export: writes the current data into a copy of this page ----
+  function buildExport(snap){
+    var root=document.documentElement.cloneNode(true);
+    Array.prototype.slice.call(root.querySelectorAll('script')).forEach(function(s){
+      if(s.textContent.indexOf('SNAPSHOT_START')<0)s.parentNode.removeChild(s);
+    });
+    var sc=root.querySelector('script');
+    var json=JSON.stringify(snap).replace(/</g,'\\u003c').replace(/\u2028/g,'\\u2028').replace(/\u2029/g,'\\u2029').replace(/\*\//g,'*\\/');
+    sc.textContent=sc.textContent.replace(/\/\*SNAPSHOT_START\*\/[\s\S]*?\/\*SNAPSHOT_END\*\//,function(){
+      return '/*SNAPSHOT_'+'START*/var SNAPSHOT='+json+';/*SNAPSHOT_'+'END*/';
+    });
+    return '<!doctype html>\n'+root.outerHTML;
+  }
+  function exportMsg(t){$('exportMsg').textContent=t;}
+  function deliver(fname,html){
+    function viaBlob(){
+      try{
+        var a=document.createElement('a');
+        a.href=URL.createObjectURL(new Blob([html],{type:'text/html'}));
+        a.download=fname;document.body.appendChild(a);a.click();a.remove();
+        exportMsg('Download started: '+fname);
+      }catch(e){exportMsg('Download blocked here. Open the dashboard in its own tab and try again.');}
+    }
+    if(window.claude&&typeof window.claude.use==='function'){
+      window.claude.use('downloads').then(function(d){
+        if(!d){viaBlob();return;}
+        d.save({filename:fname,data:html}).then(function(){exportMsg('Saved '+fname);},function(err){
+          exportMsg(err&&err.code==='declined'?'Save cancelled.':'Could not save from this view.');
+        });
+      },viaBlob);
+    }else viaBlob();
+  }
+  $('exportBtn').addEventListener('click',function(){
+    var snap=JSON.parse(JSON.stringify(S));
+    snap.name=$('name').value;snap.intro=$('intro').value;snap.stage=$('stage').value;snap.idea=$('idea').value;
+    ['req','us','fb'].forEach(function(k){
+      var v=$(INPUT[k]).value;snap[k]=v;
+      if(snap.ex&&snap.ex[k]&&v!==EXAMPLES[k])delete snap.ex[k];
+    });
+    snap.savedAt=Date.now();
+    var html;
+    try{html=buildExport(snap);}catch(e){exportMsg('Export failed.');return;}
+    var slug=String(snap.name||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,40);
+    deliver((slug||'productpilot-dashboard')+'.html',html);
+  });
+
+  renderAll();
+})();
+</script>
+
+</body></html>
