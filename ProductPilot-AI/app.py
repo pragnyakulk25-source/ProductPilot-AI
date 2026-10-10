@@ -26,10 +26,14 @@ def generate_requirements():
         if not idea:
             return jsonify({"error": "Product idea cannot be empty"}), 400
             
-        mock_requirements = [
-            {"id": "FR-01", "type": "functional", "description": "Students browse canteens and menus in real time."},
-            {"id": "NFR-01", "type": "non-functional", "description": "Order page loads fast on campus Wi-Fi."}
-        ]
+# 1. Look inside the real database table named 'requirements'
+cursor.execute("SELECT * FROM requirements")
+rows = cursor.fetchall()
+conn.close()
+
+# 2. Put the real data from the database into your dashboard cards live!
+real_data = [{"id": row["id"], "type": row["type"], "description": row["description"]} for row in rows]
+return jsonify({"status": "success", "data": real_data})
         return jsonify({"status": "success", "data": mock_requirements}), 200
     except Exception as e:
         raise e
