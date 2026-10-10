@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import sqlite3
 import json
@@ -26,13 +26,24 @@ def generate_requirements():
         if not idea:
             return jsonify({"error": "Product idea cannot be empty"}), 400
             
-        mock_requirements = [
-            {"id": "FR-01", "type": "functional", "description": "Students browse canteens and menus in real time."},
-            {"id": "NFR-01", "type": "non-functional", "description": "Order page loads fast on campus Wi-Fi."}
-        ]
+        # Connect to Netra's database layer
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        
+        # Save the idea and dummy requirements into the actual database tables
+        cursor.execute("INSERT OR REPLACE INTO requirements (id, type, description) VALUES (?, ?, ?)", 
+                       ("FR-01", "functional", f"System allows analyzing concept: {idea[:20]}..."))
+        conn.commit()
+        
+        # Read the stored data back to send it to the UI
+        cursor.execute("SELECT * FROM requirements")
+        rows = cursor.fetchall()
+        conn.close()
+        
+        mock_requirements = [{"id": row["id"], "type": row["type"], "description": row["description"]} for row in rows]
         return jsonify({"status": "success", "data": mock_requirements}), 200
     except Exception as e:
-        raise e
+        return jsonify({"error": "Database error", "details": str(e)}), 500
 
 @app.route('/api/define/stories', methods=['POST'])
 def generate_stories():
@@ -63,6 +74,10 @@ def get_kpi_metrics():
         "test_cases_count": 26
     }
     return jsonify(metrics), 200
+
+@app.route('/')
+def home():
+    return render_template('productpilot-ai.html')
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)

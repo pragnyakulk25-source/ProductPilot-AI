@@ -385,6 +385,77 @@ Low: change the logo colour"></textarea>
 
   renderAll();
 })();
+
+// Function to send the product idea text box input to your running backend server
+async function submitProductIdea() {
+  
+    // 1. Grab the text from your Product Idea input area
+    const textAreas = document.querySelectorAll('textarea');
+    const ideaInput = textAreas[0]; 
+    const ideaText = ideaInput ? ideaInput.value.trim() : '';
+
+    if (!ideaText) {
+        alert("Please enter a product idea first!");
+        return;
+    }
+
+    try {
+        // 2. Pass the data to your backend server route
+        const response = await fetch('http://localhost:5000/api/define/requirements', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ idea: ideaText })
+        });
+
+        const result = await response.json();
+
+        // 3. Process the backend response and display it on the screen
+        if (response.ok && result.status === "success") {
+            displayRequirements(result.data);
+        } else {
+            console.error("Backend Error:", result.error);
+        }
+    } catch (error) {
+        console.error("Connection failed:", error);
+    }
+}
+
+// Function to dynamically insert the generated requirements into your layout cards
+function displayRequirements(requirements) {
+    const rightPanelContainer = document.querySelector('.card.bg-slate-800 p') || 
+                                document.querySelector('.flex.flex-col.gap-4 p');
+
+    if (rightPanelContainer) {
+        const parentCard = rightPanelContainer.closest('.card') || rightPanelContainer.parentElement;
+        parentCard.innerHTML = '<h3 style="color: white; font-size: 18px; font-weight: bold; margin-bottom: 16px;">Analyzed Requirements</h3>'; 
+        
+        requirements.forEach((req, index) => {
+            const cardHTML = `
+                <div style="margin-bottom: 12px; padding: 16px; background: #1e293b; border: 1px solid #334155; border-radius: 8px; text-align: left;">
+                    <div style="color: #38bdf8; font-weight: bold; font-size: 13px; margin-bottom: 4px;">SYSTEM ID: R-0${index + 1} | TYPE: ${req.type.toUpperCase()}</div>
+                    <div style="color: #e2e8f0; font-size: 14px; line-height: 1.5;">${req.description}</div>
+                </div>`;
+            parentCard.insertAdjacentHTML('beforeend', cardHTML);
+        });
+        alert("Success! Live backend data loaded cleanly into your dashboard.");
+    } else {
+        alert("Requirements fetched, refreshing interface layout details!");
+    }
+}
+
+// Attach this script connection to your frontend 'Show requirements' action button
+document.addEventListener('DOMContentLoaded', () => {
+    const submitButton = document.querySelector('button.btn-primary') || document.querySelector('button');
+    if (submitButton) {
+        submitButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            submitProductIdea();
+        });
+    }
+});
+
 </script>
 
 </body></html>
