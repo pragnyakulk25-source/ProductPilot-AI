@@ -1,12 +1,9 @@
-<!doctype html>
-<html><head>
-    
-  <style id="claude-scrollbar">@layer claude-scrollbar{*{scrollbar-width:thin}html{scrollbar-color:rgb(128 128 128 / 50%) transparent}}</style><meta charset="utf8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><style>.__cwhr-sel{outline:1px solid hsl(40 70% 40%) !important;outline-offset:0;}html[data-cwhr-mode]:not(#__cwhr_),html[data-cwhr-mode] :not(#__cwhr_){cursor:url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%20.5h0A11.5%2011.5%200%200%201%2023.5%2012v0A11.5%2011.5%200%200%201%2012%2023.5H2.5a2%202%200%200%201-2-2V12A11.5%2011.5%200%200%201%2012%20.5Z'%20fill%3D'%23fff'%20stroke%3D'rgba(0%2C0%2C0%2C0.22)'%20stroke-width%3D'1'%2F%3E%3C%2Fsvg%3E") 1 23, url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACjklEQVR4AbRWS2gaURR9TGpiFTUEWpKQkA+EruqizWcRSBRT/G8KKpXiyo0ra1fVNiDFLmypFUo3iht/iO4Uay1FGwtFECl1p6KWLly4CGqrSMTY+wRFQ7WhGYd7Zu697845b+7M8B6BJh+UxcXFG3a7XeTxeHQAC+C12+1+ZLPZhHgMbp8FjLWxAkaj8U48Hg8lEomfIpEoLBaLLTKZTAd4LJFI3kD8HsZ+xGKxoMFgYI9T+JvAtUAg8FylUn3hcDj8ra0t6vLyMmKxWIhCofSAfZyDMRqXy+Wr1eqvPp/vKYjMAEZsRMDpdN6MRCKf+Xz+8cbGBm2kckIAtXShUGgKh8Mnfr9/Ybh0IKDT6a4vLS19EggE+wwGY7jmUj6TyUTQyv35+fmP0MbBexkISKVS+97e3u1LsU0oAo67Go3G1i/pCZjN5t3Nzc0H/zPzPlH/ip8EWvbQYrHs4hwWmN3e3n62traGfZy7MtbX12fYbPYTIKIQOzs7C6urq/cgINVWVlaO4EtjEXq9nken06mksgMZtJthtVp5xNzcHBsEIEWu0Wg0RKVS2USz2WTigFx6hPCkMTfRarXgB6WQzd/j63Q6bdK+nB7j0KnRaCCCIMpTE4D2oEql8m1qAvV6/VSr1U5PIJvN+qFjv6fyBIVC4ZfD4XgJAmekC9RqNZROp1+FQqESCCDSBWCVO1EoFC8wOQZpAnjm0Wj0O/xX94H4HNAzotvtNnreFU6lUgllMplAMpnclcvlp8NURC6Xi8BLGc5N9NvtNqpWq6hcLqN8Pn8OLUkAMe/g4EAOG4WzizcTJpPpA6zFIpfL9Ra2I45/IRgM2lKp1LtisXjs9XpvHR4eHimVythF4n78BwAA//8r8OPFAAAABklEQVQDAPCY8Oae0TJxAAAAAElFTkSuQmCC") 1 23, default !important;}html[data-cwhr-mode][data-cwhr-composing]:not(#__cwhr_),html[data-cwhr-mode][data-cwhr-composing] :not(#__cwhr_){cursor:default !important;}</style></head><body id="artifacts-component-root-html">
-<title>Hackathon Dashboard</title>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>ProductPilot AI</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: sticky header with project identity, tab row for the four sections, one working panel at a time. Each panel has an input side and an output side. */
+/* Layout: wordmark header with progress, action toolbar, scrolling tab row for eight sections, one panel at a time with input on the left and output on the right. */
 :root{
   --bg:#f1f4f7; --surface:#ffffff; --surface2:#e9eef3; --ink:#12202c; --muted:#566878; --line:#d5dde5;
   --accent:#1f5fcf; --accent-ink:#ffffff; --ok:#17794a; --warn:#9a5b00; --crit:#b3261e; --idle:#6b7b89;
@@ -25,112 +22,173 @@
 
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.5;padding-inline:16px;padding-block:20px 48px}
-.wrap{max-width:1040px;margin-inline:auto;display:flex;flex-direction:column;gap:20px}
-h1,h2,h3,p{margin:0}
+.wrap{max-width:1040px;margin-inline:auto;display:flex;flex-direction:column;gap:18px}
+h1,h2,h3,h4,p{margin:0}
 h1,h2,h3{text-wrap:balance;letter-spacing:-0.01em}
 button,input,select,textarea{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+a{color:var(--accent)}
 .label{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
 
 header.top{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:flex-end}
-.ident{min-width:0;flex:1 1 320px;display:flex;flex-direction:column;gap:4px}
-.name{font-size:clamp(24px,5vw,34px);font-weight:700;letter-spacing:-0.02em;width:100%;background:transparent;border:0;border-bottom:1px dashed var(--line);padding:2px 0;min-width:0}
-.name:hover{border-bottom-color:var(--muted)}
-.progress{display:flex;flex-direction:column;gap:6px;min-width:200px}
-.meter{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+h1.brand{font-size:clamp(28px,6vw,38px);font-weight:700;letter-spacing:-0.025em;line-height:1.1}
+h1.brand span{font-family:var(--mono);font-weight:500;font-size:.55em;color:var(--accent);letter-spacing:0;margin-left:6px;vertical-align:.35em}
+.progress{display:flex;flex-direction:column;gap:6px;min-width:220px}
+.meter{display:grid;grid-template-columns:repeat(8,1fr);gap:3px}
 .meter i{height:8px;background:var(--surface2);border-radius:2px;display:block}
 .meter i.on{background:var(--accent)}
 
-nav.tabs{display:flex;gap:4px;overflow-x:auto;border-bottom:1px solid var(--line)}
-nav.tabs button{background:none;border:0;border-bottom:3px solid transparent;padding:10px 14px;cursor:pointer;white-space:nowrap;color:var(--muted);font-weight:500;display:flex;gap:8px;align-items:center}
-nav.tabs button .n{font-family:var(--mono);font-size:12px}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.toolbar .spacer{flex:1 1 20px}
+#toast{font-size:13px;color:var(--muted);min-height:20px}
+#toast.err{color:var(--crit)}
+#clearConfirm{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13.5px;border:1px solid var(--crit);background:var(--crit-bg);color:var(--crit);padding:6px 10px;border-radius:6px}
+#clearConfirm[hidden]{display:none}
+
+nav.tabs{display:flex;gap:2px;overflow-x:auto;border-bottom:1px solid var(--line)}
+nav.tabs button{background:none;border:0;border-bottom:3px solid transparent;padding:10px 12px;cursor:pointer;white-space:nowrap;color:var(--muted);font-weight:500;display:flex;gap:8px;align-items:center}
+nav.tabs button .s{width:7px;height:7px;border-radius:50%;background:var(--line)}
+nav.tabs button .s.on{background:var(--ok)}
 nav.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent);font-weight:600}
 nav.tabs button:hover{color:var(--ink)}
 
-.panel{display:flex;flex-direction:column;gap:20px}
+.panel{display:flex;flex-direction:column;gap:18px}
 .panel[hidden]{display:none}
-.grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:20px}
+.grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:18px}
 @media (max-width:760px){.grid2{grid-template-columns:minmax(0,1fr)}}
 .box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px;display:flex;flex-direction:column;gap:12px;min-width:0}
 .box h2{font-size:17px}
-.box p.help{color:var(--muted);font-size:13.5px}
+.box h3{font-size:14.5px}
+.box p.help,.help{color:var(--muted);font-size:13.5px}
 textarea,input[type=text],select{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:9px 11px;min-width:0}
-textarea{min-height:140px;resize:vertical;font-family:var(--mono);font-size:13px;line-height:1.55}
-textarea.prose{font-family:var(--font);font-size:15px;min-height:96px}
+textarea{min-height:130px;resize:vertical;font-family:var(--mono);font-size:13px;line-height:1.55}
+textarea.prose{font-family:var(--font);font-size:15px;min-height:92px}
 .field{display:flex;flex-direction:column;gap:6px}
 .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.row.between{justify-content:space-between}
 .btn{background:var(--accent);color:var(--accent-ink);border:0;border-radius:6px;padding:8px 14px;font-weight:600;cursor:pointer}
 .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);font-weight:500}
+.btn.danger{background:var(--crit);color:var(--surface)}
+.btn.ghost.warnline{color:var(--crit);border-color:var(--crit)}
 .btn:hover{filter:brightness(1.08)}
 .btn.ghost:hover{background:var(--surface2);filter:none}
+.btn[disabled]{opacity:.5;cursor:not-allowed;filter:none}
+.btn.sm{padding:5px 10px;font-size:13px}
+.ai-status{font-size:13px;color:var(--muted)}
+.ai-status.err{color:var(--crit)}
 
 .pill{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11.5px;padding:3px 9px;border-radius:99px;background:var(--idle-bg);color:var(--idle);white-space:nowrap}
 .pill::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
 .pill.ok{background:var(--ok-bg);color:var(--ok)}
 .pill.warn{background:var(--warn-bg);color:var(--warn)}
 .pill.crit{background:var(--crit-bg);color:var(--crit)}
-.pill.ex{background:var(--warn-bg);color:var(--warn)}
+.pill.ex,.pill.ai{background:var(--warn-bg);color:var(--warn)}
+.pill.ai{background:var(--surface2);color:var(--accent)}
 .pill.ex::before{display:none}
 
-.pipe{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
-.step{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px;display:flex;flex-direction:column;gap:8px;min-width:0}
-.step h3{font-size:15px}
-.step p{font-size:13px;color:var(--muted);flex:1}
-.step .row{justify-content:space-between}
-.linkbtn{background:none;border:0;color:var(--accent);cursor:pointer;padding:0;font-weight:600}
+.pipe{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}
+.step{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.step h3{font-size:14.5px}
+.step p{font-size:12.5px;color:var(--muted);flex:1}
+.linkbtn{background:none;border:0;color:var(--accent);cursor:pointer;padding:0;font-weight:600;text-align:left}
 .linkbtn:hover{text-decoration:underline}
 
 .notice{border:1px solid var(--line);background:var(--surface2);border-radius:8px;padding:12px 14px;font-size:13.5px;color:var(--muted)}
 .notice strong{color:var(--ink)}
-
-.empty{border:1px dashed var(--line);border-radius:8px;padding:28px 18px;text-align:center;color:var(--muted);display:flex;flex-direction:column;gap:4px;align-items:center}
+.empty{border:1px dashed var(--line);border-radius:8px;padding:24px 16px;text-align:center;color:var(--muted);display:flex;flex-direction:column;gap:4px;align-items:center}
 .empty strong{color:var(--ink)}
 
 ol.reqs,ul.plain{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
 ol.reqs li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;padding:10px 12px;background:var(--bg);border:1px solid var(--line);border-radius:6px}
-ol.reqs .id{font-family:var(--mono);font-size:12px;color:var(--accent);padding-top:2px}
+ol.reqs .id,.rid{font-family:var(--mono);font-size:12px;color:var(--accent);padding-top:2px}
 .card{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px 12px;overflow-wrap:anywhere}
 .card.story{border-left:3px solid var(--accent)}
 .card.test{border-left:3px solid var(--ok)}
+.card.sev-crit{border-left:3px solid var(--crit)}
+.card.sev-warn{border-left:3px solid var(--warn)}
+.card.sev-ok{border-left:3px solid var(--ok)}
+.card .t{font-weight:600}
+.card .w{color:var(--muted);font-size:13.5px}
+.card .a{font-size:13.5px}
 .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.cols h3{font-size:14px;margin-bottom:8px;display:flex;justify-content:space-between;gap:8px;align-items:center}
+.cols h3{margin-bottom:8px;display:flex;justify-content:space-between;gap:8px;align-items:center}
 .stack{display:flex;height:12px;border-radius:3px;overflow:hidden;background:var(--surface2)}
 .stack span{display:block;height:100%}
 .legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--muted)}
 .legend b{color:var(--ink);font-variant-numeric:tabular-nums}
 .dot{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px}
 .fbitem{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:start}
+
+.aiout{border-top:1px solid var(--line);padding-top:12px;display:flex;flex-direction:column;gap:8px}
+.aiout .mdh{font-size:14px;margin-top:6px}
+.aiout p{font-size:14px}
+ul.md{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px;font-size:14px}
+code{font-family:var(--mono);font-size:12.5px;background:var(--surface2);padding:1px 5px;border-radius:4px}
+
+.big{font-size:40px;font-weight:700;letter-spacing:-0.03em;line-height:1;font-variant-numeric:tabular-nums}
+.verdict{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.verdict .v{font-size:22px;font-weight:700;letter-spacing:-0.01em}
+.v.ok{color:var(--ok)} .v.warn{color:var(--warn)} .v.crit{color:var(--crit)} .v.idle{color:var(--idle)}
+.news{display:flex;flex-direction:column;gap:6px;padding:12px;background:var(--bg);border:1px solid var(--line);border-radius:6px}
+.news h3{font-size:14.5px}
+.news .meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:12.5px;color:var(--muted)}
+.news p{font-size:13.5px;color:var(--muted)}
+.signals{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.sig{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px 12px;display:flex;flex-direction:column;gap:4px}
+.sig b{font-size:20px;font-variant-numeric:tabular-nums}
+.sig.ok b{color:var(--ok)} .sig.warn b{color:var(--warn)} .sig.crit b{color:var(--crit)} .sig.idle b{color:var(--idle)}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:6px}
+table{border-collapse:collapse;width:100%;min-width:600px;font-size:13.5px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:500;background:var(--surface2)}
+td.n{font-variant-numeric:tabular-nums}
 @media (prefers-reduced-motion:no-preference){.btn,nav.tabs button{transition:background .15s,color .15s,filter .15s}}
 </style>
 
 <div class="wrap">
   <header class="top">
-    <div class="ident">
-      <span class="label">Hackathon project</span>
-      <input class="name" id="name" type="text" maxlength="80" placeholder="Name your project" aria-label="Project name">
-    </div>
+    <h1 class="brand">ProductPilot<span>AI</span></h1>
     <div class="progress">
-      <span class="label" id="progressLabel">4 of 4 sections have data</span>
-      <div class="meter" id="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
-      <div class="row"><button class="btn" id="exportBtn" type="button">Export with my data</button><span class="label" id="exportMsg" role="status"></span></div>
+      <span class="label" id="progressLabel">0 of 8 sections have data</span>
+      <div class="meter" id="meter"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
     </div>
   </header>
 
+  <div class="toolbar">
+    <button class="btn ghost" id="btnExport" disabled>Export data (.json)</button>
+    <button class="btn ghost" id="btnReport" disabled>Download report (.md)</button>
+    <button class="btn ghost warnline" id="btnClear">Clear all my data</button>
+    <span id="clearConfirm" hidden>This erases everything saved on this page.
+      <button class="btn danger sm" id="clearYes">Erase everything</button>
+      <button class="btn ghost sm" id="clearNo">Cancel</button></span>
+    <span class="spacer"></span>
+    <span id="toast" role="status" aria-live="polite"></span>
+  </div>
+
   <nav class="tabs" role="tablist" aria-label="Dashboard sections">
-    <button role="tab" id="tab-overview" aria-selected="false" data-tab="overview"><span class="n">1</span>Overview</button>
-    <button role="tab" id="tab-req" aria-selected="false" data-tab="req"><span class="n">2</span>Requirements</button>
-    <button role="tab" id="tab-us" aria-selected="false" data-tab="us"><span class="n">3</span>User Stories and Test Cases</button>
-    <button role="tab" id="tab-fb" aria-selected="true" data-tab="fb"><span class="n">4</span>Feedback Analysis</button>
+    <button role="tab" id="tab-overview" aria-selected="true" data-tab="overview"><i class="s" id="dot-overview"></i>Overview</button>
+    <button role="tab" id="tab-req" aria-selected="false" data-tab="req"><i class="s" id="dot-req"></i>Requirements</button>
+    <button role="tab" id="tab-us" aria-selected="false" data-tab="us"><i class="s" id="dot-us"></i>Stories and Tests</button>
+    <button role="tab" id="tab-fb" aria-selected="false" data-tab="fb"><i class="s" id="dot-fb"></i>Feedback</button>
+    <button role="tab" id="tab-news" aria-selected="false" data-tab="news"><i class="s" id="dot-news"></i>News Panel</button>
+    <button role="tab" id="tab-impact" aria-selected="false" data-tab="impact"><i class="s" id="dot-impact"></i>Change Impact</button>
+    <button role="tab" id="tab-cov" aria-selected="false" data-tab="cov"><i class="s" id="dot-cov"></i>Test Coverage</button>
+    <button role="tab" id="tab-risk" aria-selected="false" data-tab="risk"><i class="s" id="dot-risk"></i>Risk Predictor</button>
   </nav>
 
-  <!-- 1 Overview -->
-  <section class="panel" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview" hidden="">
+  <!-- Overview -->
+  <section class="panel" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview">
     <div class="grid2">
       <div class="box">
-        <h2>About this project</h2>
+        <div class="row between"><h2>Product idea</h2><span id="exov"></span></div>
+        <div class="field">
+          <label class="label" for="idea">Your product idea</label>
+          <textarea class="prose" id="idea" placeholder="What are you building, who is it for, and what makes it different?"></textarea>
+        </div>
         <div class="field">
           <label class="label" for="intro">Short introduction</label>
-          <textarea class="prose" id="intro" placeholder="What does the project do, and who is it for? Two or three sentences."></textarea>
+          <textarea class="prose" id="intro" style="min-height:70px" placeholder="Two or three sentences for someone seeing the project for the first time."></textarea>
         </div>
         <div class="field">
           <label class="label" for="stage">Development status</label>
@@ -141,321 +199,670 @@ ol.reqs .id{font-family:var(--mono);font-size:12px;color:var(--accent);padding-t
             <option>Demo ready</option>
           </select>
         </div>
+        <div class="row"><button class="btn ghost" id="exOverview">Fill example</button></div>
       </div>
-      <div class="box">
-        <h2>Workflow sections</h2>
-        <p class="help">Each section shows output from the matching feature your team has built. A section turns green once you paste that output in.</p>
-        <div class="pipe" id="pipe"><div class="step"><div class="row"><span class="label">Step 1</span><span class="pill ok">Filled in</span></div><h3>Overview</h3><p>Name, introduction and status of the project.</p></div><div class="step"><div class="row"><span class="label">Step 2</span><span class="pill ok">Data connected</span></div><h3>Requirements</h3><p>Requirements analyzed from a product idea.</p><button class="linkbtn" data-go="req" style="text-align:left">Open section</button></div><div class="step"><div class="row"><span class="label">Step 3</span><span class="pill ok">Data connected</span></div><h3>User Stories and Test Cases</h3><p>Output of your AI workflow.</p><button class="linkbtn" data-go="us" style="text-align:left">Open section</button></div><div class="step"><div class="row"><span class="label">Step 4</span><span class="pill ok">Data connected</span></div><h3>Feedback Analysis</h3><p>Feedback and priorities from your team.</p><button class="linkbtn" data-go="fb" style="text-align:left">Open section</button></div></div>
+      <div class="box" id="suggestBox">
+        <div class="row between"><h2>Next best actions</h2></div>
+        <div id="suggestList"></div>
       </div>
     </div>
-    <div class="notice"><strong>Honest status.</strong> This dashboard does not run any AI itself. Sections 2 to 4 display what your teammates' workflow produced, and show "Waiting" until you paste it in.</div>
+    <div class="box">
+      <h2>All sections</h2>
+      <div class="pipe" id="pipe"></div>
+    </div>
+    <div class="notice"><strong>How ProductPilot AI works.</strong> Every check on this dashboard is calculated on this page with built-in rules, so no connection is needed and nothing is sent anywhere. Your data stays in this browser until you export it.</div>
   </section>
 
-  <!-- 2 Requirements -->
-  <section class="panel" id="panel-req" role="tabpanel" aria-labelledby="tab-req" hidden="">
+  <!-- Requirements -->
+  <section class="panel" id="panel-req" role="tabpanel" aria-labelledby="tab-req" hidden>
     <div class="grid2">
       <div class="box">
-        <h2>Product idea</h2>
-        <p class="help">Enter the idea your workflow analyzes, then paste the requirements it returned. One requirement per line.</p>
-        <div class="field">
-          <label class="label" for="idea">Product idea</label>
-          <textarea class="prose" id="idea" placeholder="Example: A mobile app that helps students plan study sessions."></textarea>
-        </div>
+        <h2>Requirements</h2>
+        <p class="help">Paste the requirements your workflow produced, one per line. ProductPilot AI uses the product idea from the Overview.</p>
         <div class="field">
           <label class="label" for="reqIn">Requirements output</label>
-          <textarea id="reqIn" placeholder="Users can create an account
-The app sends a reminder before each session
-Study plans can be shared with a friend"></textarea>
+          <textarea id="reqIn" placeholder="Students can sign in with a college email&#10;Students can split one order between roommates"></textarea>
         </div>
         <div class="row"><button class="btn" data-show="req">Show requirements</button><button class="btn ghost" data-example="req">Fill example</button><button class="btn ghost" data-clear="req">Clear</button></div>
       </div>
-      <div class="box" id="reqOut"><div class="row" style="justify-content:space-between"><h2>Analyzed requirements</h2><span class="pill ok">13 found</span></div><div><div class="label">Product idea</div><p>A student food delivery app designed for college students to order affordable meals and snacks from nearby restaurants and campus food outlets. Students can browse menus, compare prices, place orders, make payments, and track their deliveries. The app focuses on affordable food, quick delivery to college campuses and hostels, and a simple, convenient ordering experience for students.</p></div><ol class="reqs"><li><span class="id">R01</span><span>Students can create an account and log in securely.</span></li><li><span class="id">R02</span><span>Students can browse nearby restaurants and campus food outlets.</span></li><li><span class="id">R03</span><span>Students can view food menus, prices, and descriptions.</span></li><li><span class="id">R04</span><span>Students can search for food items and filter them by category.</span></li><li><span class="id">R05</span><span>Students can add food items to their cart and update quantities.</span></li><li><span class="id">R06</span><span>Students can place food orders and select a delivery location.</span></li><li><span class="id">R07</span><span>Students can make payments using available payment methods.</span></li><li><span class="id">R08</span><span>Students can track their order status in real time, where supported.</span></li><li><span class="id">R09</span><span>Students can receive notifications about order confirmation and delivery updates.</span></li><li><span class="id">R10</span><span>Students can view their previous orders and reorder meals.</span></li><li><span class="id">R11</span><span>The app displays affordable meal options suitable for student budgets.</span></li><li><span class="id">R12</span><span>Restaurant partners can manage menus and update food availability.</span></li><li><span class="id">R13</span><span>Delivery partners can view assigned orders and update delivery status.</span></li></ol></div>
+      <div class="box"><div id="reqOut"></div><div id="reqGaps"></div></div>
     </div>
   </section>
 
-  <!-- 3 User stories + tests -->
-  <section class="panel" id="panel-us" role="tabpanel" aria-labelledby="tab-us" hidden="">
+  <!-- Stories and tests -->
+  <section class="panel" id="panel-us" role="tabpanel" aria-labelledby="tab-us" hidden>
     <div class="grid2">
       <div class="box">
         <h2>Workflow output</h2>
-        <p class="help">Paste the generated text. Lines starting with "As a" become user stories. Lines starting with "Given", "Test" or "TC" become test cases.</p>
+        <p class="help">Lines starting with "As a" become user stories. Lines starting with "Given", "Test" or "TC" become test cases.</p>
         <div class="field">
           <label class="label" for="usIn">User stories and test cases</label>
-          <textarea id="usIn" style="min-height:220px" placeholder="As a student, I want reminders so that I never miss a session
-Given a session at 5 pm, when it is 4:45 pm, then a reminder is sent"></textarea>
+          <textarea id="usIn" style="min-height:220px" placeholder="As a student, I want live delivery status so that I know when to come down&#10;Given two roommates share an order, when one pays late, then the order still goes ahead"></textarea>
         </div>
         <div class="row"><button class="btn" data-show="us">Show output</button><button class="btn ghost" data-example="us">Fill example</button><button class="btn ghost" data-clear="us">Clear</button></div>
       </div>
-      <div class="box" id="usOut"><div class="row" style="justify-content:space-between"><h2>Generated output</h2><span class="pill ok">7 stories, 6 tests</span></div><div class="cols"><div><h3>User stories<span class="label">7</span></h3><ul class="plain"><li class="card story">As a student, I want to browse nearby restaurants so that I can find food available near my college.</li><li class="card story">As a student, I want to view food prices and menus so that I can choose affordable meals.</li><li class="card story">As a student, I want to add food items to my cart so that I can order multiple items together.</li><li class="card story">As a student, I want to place an order so that I can get food delivered to my college or hostel.</li><li class="card story">As a student, I want to track my order status so that I know when my food will arrive.</li><li class="card story">As a student, I want to receive order notifications so that I know when my order is confirmed and delivered.</li><li class="card story">As a restaurant partner, I want to update food availability so that students see the items currently available.</li></ul></div><div><h3>Test cases<span class="label">6</span></h3><ul class="plain"><li class="card test">Given a student opens the restaurant list, When nearby restaurants are available, Then the app displays restaurant names and menus.</li><li class="card test">Given a student adds a food item to the cart, When the cart is opened, Then the selected item, quantity, and price are displayed correctly.</li><li class="card test">Given a student places a valid order, When the order is confirmed, Then the app displays an order confirmation.</li><li class="card test">Given a student opens order tracking, When the order status changes, Then the app displays the latest available status.</li><li class="card test">Given a restaurant marks an item unavailable, When students view the updated menu, Then the item is shown as unavailable.</li><li class="card test">Given a student enters invalid login details, When they attempt to log in, Then the app displays an appropriate error message.</li></ul></div></div></div>
+      <div class="box"><div id="usOut"></div><div id="usGaps"></div></div>
     </div>
   </section>
 
-  <!-- 4 Feedback -->
-  <section class="panel" id="panel-fb" role="tabpanel" aria-labelledby="tab-fb">
+  <!-- Feedback -->
+  <section class="panel" id="panel-fb" role="tabpanel" aria-labelledby="tab-fb" hidden>
     <div class="grid2">
       <div class="box">
         <h2>Feedback input</h2>
-        <p class="help">One feedback item per line. Include the word High, Medium or Low to set its priority. Items without one show as Unrated.</p>
+        <p class="help">One item per line. Start with High, Medium or Low to set its priority. Items without one show as Unrated.</p>
         <div class="field">
           <label class="label" for="fbIn">Feedback and priorities</label>
-          <textarea id="fbIn" style="min-height:220px" placeholder="High: reminders arrive too late
-Medium: add a dark theme
-Low: change the logo colour"></textarea>
+          <textarea id="fbIn" style="min-height:220px" placeholder="High: delivery fee is too high for one sandwich&#10;Medium: add a vegan filter&#10;Low: change the app icon"></textarea>
         </div>
         <div class="row"><button class="btn" data-show="fb">Show analysis</button><button class="btn ghost" data-example="fb">Fill example</button><button class="btn ghost" data-clear="fb">Clear</button></div>
       </div>
-      <div class="box" id="fbOut"><div class="row" style="justify-content:space-between"><h2>Feedback analysis</h2><span class="pill ok">9 items</span></div><div class="stack" role="img" aria-label="Feedback by priority"><span style="width:33.33333333333333%;background:var(--crit)"></span><span style="width:33.33333333333333%;background:var(--warn)"></span><span style="width:33.33333333333333%;background:var(--ok)"></span></div><div class="legend"><span><i class="dot" style="background:var(--crit)"></i>High <b>3</b></span><span><i class="dot" style="background:var(--warn)"></i>Medium <b>3</b></span><span><i class="dot" style="background:var(--ok)"></i>Low <b>3</b></span><span><i class="dot" style="background:var(--idle)"></i>Unrated <b>0</b></span></div><ul class="plain"><li class="card fbitem"><span class="pill crit">High</span><span>Food delivery takes too long to reach college hostels.</span></li><li class="card fbitem"><span class="pill crit">High</span><span>Food prices and delivery charges are too expensive for students.</span></li><li class="card fbitem"><span class="pill crit">High</span><span>Students need accurate order tracking and delivery updates.</span></li><li class="card fbitem"><span class="pill warn">Medium</span><span>Add affordable student meal combos and discounts.</span></li><li class="card fbitem"><span class="pill warn">Medium</span><span>Provide more vegetarian food options.</span></li><li class="card fbitem"><span class="pill warn">Medium</span><span>Allow students to schedule food orders before class breaks.</span></li><li class="card fbitem"><span class="pill ok">Low</span><span>Add a dark mode to the app.</span></li><li class="card fbitem"><span class="pill ok">Low</span><span>Allow users to customize the app theme.</span></li><li class="card fbitem"><span class="pill ok">Low</span><span>Add more color options to the app logo.</span></li></ul></div>
+      <div class="box"><div id="fbOut"></div></div>
+    </div>
+  </section>
+
+  <!-- News panel -->
+  <section class="panel" id="panel-news" role="tabpanel" aria-labelledby="tab-news" hidden>
+    <div class="notice" id="newsNote"></div>
+    <div class="grid2">
+      <div class="box">
+        <h2>Industry headlines</h2>
+        <div id="newsList" style="display:flex;flex-direction:column;gap:10px"></div>
+        <h3>Add a headline</h3>
+        <div class="field"><label class="label" for="newsTitle">Headline</label><input type="text" id="newsTitle" maxlength="200" placeholder="Paste a current headline about your industry"></div>
+        <div class="field"><label class="label" for="newsDetail">Source, date or a line of detail (optional)</label><input type="text" id="newsDetail" maxlength="300" placeholder="Example: Economic Times, 9 Oct 2026, fees capped at 5%"></div>
+        <div class="row"><button class="btn ghost" id="newsAdd">Add headline</button></div>
+      </div>
+      <div class="box">
+        <h2>Should you build this idea?</h2>
+        <p class="help">Compares your product idea with the headlines on the left and gives a verdict. Headlines count only when they share key words with your idea.</p>
+        <div class="row">
+          <button class="btn" data-run="news">Check my idea against the news</button>
+          <span class="ai-status" id="st-news" aria-live="polite"></span>
+        </div>
+        <div id="newsOut"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Change impact -->
+  <section class="panel" id="panel-impact" role="tabpanel" aria-labelledby="tab-impact" hidden>
+    <div class="grid2">
+      <div class="box">
+        <h2>Change Impact Analyzer</h2>
+        <p class="help">Describe a change you are thinking about. You see which requirements, stories and tests it touches, how big the change is and what to do about it.</p>
+        <div class="field"><label class="label" for="change">Proposed change</label>
+          <textarea class="prose" id="change" placeholder="Example: Allow group orders across different hostels with one shared delivery slot"></textarea></div>
+        <div class="row"><button class="btn ghost" id="exChange">Fill example</button></div>
+        <div class="row">
+          <button class="btn" data-run="impact">Analyze change</button>
+          <span class="ai-status" id="st-impact" aria-live="polite"></span>
+        </div>
+      </div>
+      <div class="box"><div id="impactLocalOut"></div><div id="impactOut"></div></div>
+    </div>
+  </section>
+
+  <!-- Coverage -->
+  <section class="panel" id="panel-cov" role="tabpanel" aria-labelledby="tab-cov" hidden>
+    <div class="box">
+      <h2>Requirement to Test Coverage</h2>
+      <p class="help">Each requirement is matched to the stories and test cases that share its key words. A requirement with a test is Covered, with only a story is Weak, with neither is a Gap. Matching is by words, so review it with your team.</p>
+      <div id="covOut"></div>
+    </div>
+  </section>
+
+  <!-- Risk -->
+  <section class="panel" id="panel-risk" role="tabpanel" aria-labelledby="tab-risk" hidden>
+    <div class="box">
+      <div class="row between"><h2>Signals from your data</h2><span id="sigLevel"></span></div>
+      <div class="signals" id="signals"></div>
+    </div>
+    <div class="grid2">
+      <div class="box">
+        <h2>Product Risk Predictor</h2>
+        <p class="help">Combines the signals above with risks that are common for this kind of product, your deadline and your team size, then ranks them.</p>
+        <div class="field"><label class="label" for="constraints">Deadline, team size or constraints (optional)</label>
+          <textarea class="prose" id="constraints" style="min-height:80px" placeholder="Example: 6 people, demo in 10 days, no budget for paid APIs"></textarea></div>
+        <div class="row">
+          <button class="btn" data-run="risk">Predict risks</button>
+          <span class="ai-status" id="st-risk" aria-live="polite"></span>
+        </div>
+      </div>
+      <div class="box"><div id="riskOut"></div></div>
     </div>
   </section>
 </div>
 
 <script>
 (function(){
-  var KEY='hackathon-dashboard-v1';
-  /*SNAPSHOT_START*/var SNAPSHOT={"name":"ProductPilot AI","intro":"ProductPilot AI is an AI-powered product management assistant that helps product teams manage tasks across the software development lifecycle. It aims to simplify requirements analysis, user story and test case generation, and customer feedback prioritization in one place. It is designed for product managers and software development teams to improve productivity and organize their workflow.","stage":"Planning","idea":"A student food delivery app designed for college students to order affordable meals and snacks from nearby restaurants and campus food outlets. Students can browse menus, compare prices, place orders, make payments, and track their deliveries. The app focuses on affordable food, quick delivery to college campuses and hostels, and a simple, convenient ordering experience for students.","req":"Students can create an account and log in securely.\nStudents can browse nearby restaurants and campus food outlets.\nStudents can view food menus, prices, and descriptions.\nStudents can search for food items and filter them by category.\nStudents can add food items to their cart and update quantities.\nStudents can place food orders and select a delivery location.\nStudents can make payments using available payment methods.\nStudents can track their order status in real time, where supported.\nStudents can receive notifications about order confirmation and delivery updates.\nStudents can view their previous orders and reorder meals.\nThe app displays affordable meal options suitable for student budgets.\nRestaurant partners can manage menus and update food availability.\nDelivery partners can view assigned orders and update delivery status.","us":"As a student, I want to browse nearby restaurants so that I can find food available near my college.\n\nAs a student, I want to view food prices and menus so that I can choose affordable meals.\n\nAs a student, I want to add food items to my cart so that I can order multiple items together.\n\nAs a student, I want to place an order so that I can get food delivered to my college or hostel.\n\nAs a student, I want to track my order status so that I know when my food will arrive.\n\nAs a student, I want to receive order notifications so that I know when my order is confirmed and delivered.\n\nAs a restaurant partner, I want to update food availability so that students see the items currently available.\n\nGiven a student opens the restaurant list, When nearby restaurants are available, Then the app displays restaurant names and menus.\n\nGiven a student adds a food item to the cart, When the cart is opened, Then the selected item, quantity, and price are displayed correctly.\n\nGiven a student places a valid order, When the order is confirmed, Then the app displays an order confirmation.\n\nGiven a student opens order tracking, When the order status changes, Then the app displays the latest available status.\n\nGiven a restaurant marks an item unavailable, When students view the updated menu, Then the item is shown as unavailable.\n\nGiven a student enters invalid login details, When they attempt to log in, Then the app displays an appropriate error message.","fb":"High: Food delivery takes too long to reach college hostels.\nHigh: Food prices and delivery charges are too expensive for students.\nHigh: Students need accurate order tracking and delivery updates.\nMedium: Add affordable student meal combos and discounts.\nMedium: Provide more vegetarian food options.\nMedium: Allow students to schedule food orders before class breaks.\nLow: Add a dark mode to the app.\nLow: Allow users to customize the app theme.\nLow: Add more color options to the app logo.","ex":{},"savedAt":1791620553403};/*SNAPSHOT_END*/
-  var S={name:'',intro:'',stage:'Planning',idea:'',req:'',us:'',fb:'',ex:{},savedAt:0};
-  if(SNAPSHOT&&typeof SNAPSHOT==='object')S=Object.assign(S,SNAPSHOT);
-  try{var raw=localStorage.getItem(KEY);if(raw){var L=JSON.parse(raw);if(!SNAPSHOT||(L.savedAt||0)>(S.savedAt||0))S=Object.assign(S,L);}}catch(e){}
-  function save(){S.savedAt=Date.now();try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
-  function $(id){return document.getElementById(id);}
-  function esc(t){return String(t).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
-  function lines(t){return String(t||'').split(/\r?\n/).map(function(l){return l.replace(/^\s*(?:[-*•]|\d+[.)])\s*/,'').trim();}).filter(Boolean);}
-
-  var EXAMPLES={
-    req:'Users can create an account and sign in\nThe app sends a reminder before each study session\nStudy plans can be shared with a friend\nThe app works offline for saved plans',
-    us:'As a student, I want a reminder before each session so that I never miss one\nAs a student, I want to share my plan so that a friend can study with me\nGiven a session at 5 pm, when the time is 4:45 pm, then a reminder is sent\nTest: a shared plan opens on the friend\'s account without a sign-in error',
-    fb:'High: reminders arrive too late to be useful\nMedium: add a dark theme\nMedium: let me edit a session after creating it\nLow: change the logo colour'
-  };
+  var KEY='productpilot-ai-v1', OLD='hackathon-dashboard-v1';
   var SECTIONS=[
-    {k:'overview',t:'Overview',d:'Name, introduction and status of the project.'},
-    {k:'req',t:'Requirements',d:'Requirements analyzed from a product idea.'},
-    {k:'us',t:'User Stories and Test Cases',d:'Output of your AI workflow.'},
-    {k:'fb',t:'Feedback Analysis',d:'Feedback and priorities from your team.'}
+    {k:'overview',t:'Overview',d:'Product idea, introduction and status.'},
+    {k:'req',t:'Requirements',d:'Requirements analyzed from the idea.'},
+    {k:'us',t:'Stories and Tests',d:'User stories and test cases.'},
+    {k:'fb',t:'Feedback',d:'Feedback grouped by priority.'},
+    {k:'news',t:'News Panel',d:'Industry news and an idea verdict.'},
+    {k:'impact',t:'Change Impact',d:'What a proposed change touches.'},
+    {k:'cov',t:'Test Coverage',d:'Requirements matched to tests.'},
+    {k:'risk',t:'Risk Predictor',d:'Likely risks and mitigations.'}
   ];
-  function hasData(k){
-    if(k==='overview')return !!(S.name.trim()||S.intro.trim());
-    return !!String(S[k]||'').trim();
-  }
-  function exBadge(k){return S.ex[k]?'<span class="pill ex">Example data</span>':'';}
-
-  function renderPipe(){
-    var n=0;
-    $('pipe').innerHTML=SECTIONS.map(function(s,i){
-      var on=hasData(s.k); if(on)n++;
-      var label=s.k==='overview'?(on?'Filled in':'Waiting'):(on?'Data connected':'Waiting for output');
-      return '<div class="step"><div class="row"><span class="label">Step '+(i+1)+'</span><span class="pill '+(on?'ok':'')+'">'+label+'</span></div><h3>'+esc(s.t)+'</h3><p>'+esc(s.d)+'</p>'+(s.k==='overview'?'':'<button class="linkbtn" data-go="'+s.k+'" style="text-align:left">Open section</button>')+'</div>';
-    }).join('');
-    var m=$('meter').children;
-    for(var i=0;i<4;i++)m[i].className=i<n?'on':'';
-    $('progressLabel').textContent=n+' of 4 sections have data';
-  }
-
-  function emptyState(title,body){
-    return '<div class="empty"><strong>'+esc(title)+'</strong><span>'+esc(body)+'</span></div>';
-  }
-
-  function renderReq(){
-    var items=lines(S.req), out=$('reqOut');
-    var head='<div class="row" style="justify-content:space-between"><h2>Analyzed requirements</h2>'+(items.length?'<span class="pill ok">'+items.length+' found</span>':'<span class="pill">Waiting</span>')+exBadge('req')+'</div>';
-    if(!items.length){out.innerHTML=head+emptyState('No requirements yet','Paste the output from your requirements workflow on the left, then choose Show requirements.');return;}
-    var idea=S.idea.trim()?'<div><div class="label">Product idea</div><p>'+esc(S.idea)+'</p></div>':'';
-    out.innerHTML=head+idea+'<ol class="reqs">'+items.map(function(t,i){return '<li><span class="id">R'+String(i+1).padStart(2,'0')+'</span><span>'+esc(t)+'</span></li>';}).join('')+'</ol>';
-  }
-
-  function renderUS(){
-    var all=lines(S.us), out=$('usOut'), st=[], tc=[], other=[];
-    all.forEach(function(l){
-      if(/^as an? /i.test(l))st.push(l);
-      else if(/^(given|test|tc)\b/i.test(l))tc.push(l);
-      else other.push(l);
-    });
-    var head='<div class="row" style="justify-content:space-between"><h2>Generated output</h2>'+(all.length?'<span class="pill ok">'+st.length+' stories, '+tc.length+' tests</span>':'<span class="pill">Waiting</span>')+exBadge('us')+'</div>';
-    if(!all.length){out.innerHTML=head+emptyState('No output yet','Run your AI workflow, paste its stories and test cases on the left, then choose Show output.');return;}
-    function col(title,arr,cls){return '<div><h3>'+title+'<span class="label">'+arr.length+'</span></h3>'+(arr.length?'<ul class="plain">'+arr.map(function(t){return '<li class="card '+cls+'">'+esc(t)+'</li>';}).join('')+'</ul>':'<div class="label">None found</div>')+'</div>';}
-    out.innerHTML=head+'<div class="cols">'+col('User stories',st,'story')+col('Test cases',tc,'test')+'</div>'+(other.length?'<div><h3 style="font-size:14px;margin-bottom:8px">Unsorted lines</h3><ul class="plain">'+other.map(function(t){return '<li class="card">'+esc(t)+'</li>';}).join('')+'</ul></div>':'');
-  }
-
+  var SNAP_DATE='11 Oct 2026';
+  var SNAPSHOT=[
+    {id:'s1',date:'3 Dec 2025',src:'exchange4media',tag:'Regulation',url:'https://www.exchange4media.com/marketing-news/new-tax-labour-rules-what-impact-will-rising-compliance-costs-have-on-platforms-149876.html',
+     title:'New tax and labour rules raise compliance costs for delivery platforms',
+     sum:'The GST Council put local delivery services under an 18% levy, and new social-security rules widen obligations for gig workers on aggregator platforms. Zomato reportedly raised its per-order platform fee from ₹10 to ₹12 before GST.'},
+    {id:'s2',date:'21 Dec 2025',src:'Inc42',tag:'Market',url:'https://inc42.com/?p=542669',
+     title:'Why 2026 won’t be an easy meal for food delivery platforms',
+     sum:'Platform fee increases gave Zomato and Swiggy little relief, and profitability is expected to stay under pressure from delivery costs. Rapido’s Ownly, working with NRAI-affiliated restaurants, is expected to squeeze margins with lower delivery fees and commissions.'},
+    {id:'s3',date:'25 Feb 2026',src:'Fisher Phillips',tag:'Privacy',url:'https://www.fisherphillips.com/en/news-insights/indias-new-data-privacy-rules-are-here.html',
+     title:'India’s DPDP Rules: key compliance deadlines approach',
+     sum:'The Consent Manager Framework becomes operational on 13 Nov 2026 and full compliance is required from 13 May 2027. Processing data of anyone under 18 needs verified parental consent, which matters if any of your users are minors.'}
+  ];
+  var EXAMPLES={
+    idea:'A food delivery app for college students. Hostel roommates split one order and pay a lower shared delivery fee, with campus canteens and nearby restaurants on one menu.',
+    intro:'Students waste money on delivery fees for single meals. This app groups orders by hostel so the fee is shared.',
+    req:'Students can sign in with a college email\nStudents can order from campus canteens and nearby restaurants\nStudents can split one order between hostel roommates\nThe app shows live delivery status\nThe app stores a student’s address and phone number only with consent',
+    us:'As a student, I want to split an order with my roommates so that we pay one delivery fee\nAs a student, I want live delivery status so that I know when to come down\nAs a canteen manager, I want to mark items sold out so that students are not charged for unavailable food\nGiven two roommates share an order, when one pays late, then the order still goes ahead after the cut-off\nTest: a student with a non-college email cannot sign in\nTest: live status updates within 10 seconds of the restaurant marking an order ready',
+    fb:'High: delivery fee is too high for a single sandwich\nHigh: order status does not update after payment\nMedium: add a Jain and vegan filter\nMedium: let me reorder a past meal in one tap\nLow: change the app icon',
+    change:'Allow group orders across different hostels with one shared delivery slot'
+  };
   var PRI=[
     {k:'High',c:'var(--crit)',re:/\b(high|critical|urgent|p0|p1)\b/i,cls:'crit'},
     {k:'Medium',c:'var(--warn)',re:/\b(medium|med|p2)\b/i,cls:'warn'},
     {k:'Low',c:'var(--ok)',re:/\b(low|minor|p3)\b/i,cls:'ok'},
     {k:'Unrated',c:'var(--idle)',re:null,cls:''}
   ];
+  var ERR={
+    not_granted:'Claude access was not allowed for this page, so AI features are off. Allow it in the page permissions to use them.',
+    sampling_disabled:'Claude is not available for this account.',
+    rate_limited:'Too many requests or your usage limit was reached. Try again in a few minutes.',
+    session_expired:'Sign in again to continue.',
+    refused:'Claude declined this input. Change the wording and try again.',
+    invalid_json:'The answer came back in a shape this page could not read. Press the button again.',
+    empty_completion:'No answer came back. Add more detail and try again.',
+    prompt_too_large:'There is too much text to send. Shorten your inputs.',
+    upstream_error:'The connection dropped. Try again.'
+  };
+
+  function DEF(){return {idea:'',intro:'',stage:'Planning',req:'',us:'',fb:'',news:[],change:'',constraints:'',ex:{},ai:{}};}
+  var S=DEF();
+  try{var raw=localStorage.getItem(KEY)||localStorage.getItem(OLD);if(raw){S=Object.assign(S,JSON.parse(raw));}}catch(e){}
+  delete S.name;
+  if(!Array.isArray(S.news))S.news=[]; if(!S.ex||typeof S.ex!=='object')S.ex={}; if(!S.ai||typeof S.ai!=='object')S.ai={};
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+
+  function $(id){return document.getElementById(id);}
+  function esc(t){return String(t==null?'':t).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  function str(v){return typeof v==='string'?v:(v==null?'':String(v));}
+  function pad(n){return n<10?'0'+n:''+n;}
+  function lines(t){return String(t||'').split(/\r?\n/).map(function(l){return l.replace(/^\s*(?:[-*•]|\d+[.)])\s*/,'').trim();}).filter(Boolean);}
+  function oneOf(v,list,def){v=str(v).toLowerCase().trim();return list.indexOf(v)>-1?v:def;}
+  function inline(s){return esc(s).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/`(.+?)`/g,'<code>$1</code>');}
+  function md(t){
+    var h='',inl=false;
+    function close(){if(inl){h+='</ul>';inl=false;}}
+    String(t).split(/\r?\n/).forEach(function(l){
+      l=l.replace(/\s+$/,'');
+      if(/^#{1,4}\s+/.test(l)){close();h+='<h3 class="mdh">'+inline(l.replace(/^#+\s+/,''))+'</h3>';}
+      else if(/^\s*(?:[-*•]|\d+[.)])\s+/.test(l)){if(!inl){h+='<ul class="md">';inl=true;}h+='<li>'+inline(l.replace(/^\s*(?:[-*•]|\d+[.)])\s+/,''))+'</li>';}
+      else if(!l.trim()){close();}
+      else{close();h+='<p>'+inline(l)+'</p>';}
+    });
+    close();return h;
+  }
+  function empty(title,body){return '<div class="empty"><strong>'+esc(title)+'</strong><span>'+esc(body)+'</span></div>';}
+  function exBadge(k){return S.ex[k]?'<span class="pill ex">Example data</span>':'';}
+  function lvlCls(l){return l==='high'?'crit':l==='medium'?'warn':l==='low'?'ok':'';}
+
+  /* ---------- parsing and local analysis ---------- */
+  function parseUS(){
+    var st=[],tc=[],ot=[];
+    lines(S.us).forEach(function(l){
+      if(/^as an? /i.test(l))st.push(l);
+      else if(/^(given|test|tc)\b/i.test(l))tc.push(l);
+      else ot.push(l);
+    });
+    return {st:st,tc:tc,ot:ot};
+  }
+  function parseFB(){
+    return lines(S.fb).map(function(l){
+      var p='Unrated';
+      for(var i=0;i<3;i++){if(PRI[i].re.test(l)){p=PRI[i].k;break;}}
+      return {pri:p,txt:l.replace(/^\s*(high|critical|urgent|medium|med|low|minor|p[0-3])\s*[:\-–|]\s*/i,'')};
+    });
+  }
+  var STOP=new Set('and the for with that this are can will should from per each when then given user users app able want who has had not all any more also its into your their them they have been being only than too may might must shall one two'.split(' '));
+  function stem(w){var r=w.replace(/(ing|ed|es|s)$/,'');return r.length>=3?r:w;}
+  function toks(s){
+    var seen=new Set();
+    String(s).toLowerCase().replace(/[^a-z0-9\s]/g,' ').split(/\s+/).forEach(function(w){
+      if(w.length>2&&!STOP.has(w))seen.add(stem(w));
+    });
+    return seen;
+  }
+  function shared(a,b){var n=0;a.forEach(function(x){if(b.has(x))n++;});return n;}
+  function match(a,b){var n=shared(a,b);return n>=2||(n===1&&Math.min(a.size,b.size)<=3);}
+  function coverage(){
+    var reqs=lines(S.req),u=parseUS();
+    var stT=u.st.map(function(x){return {x:x,t:toks(x)};}),tcT=u.tc.map(function(x){return {x:x,t:toks(x)};});
+    var rt=reqs.map(toks);
+    var rows=reqs.map(function(r,i){
+      var s=stT.filter(function(o){return match(rt[i],o.t);}).map(function(o){return o.x;});
+      var t=tcT.filter(function(o){return match(rt[i],o.t);}).map(function(o){return o.x;});
+      return {id:'R'+pad(i+1),text:r,stories:s,tests:t,status:t.length?'covered':(s.length?'weak':'gap')};
+    });
+    var orphans=tcT.filter(function(o){return !rt.some(function(r){return match(r,o.t);});}).map(function(o){return o.x;});
+    var c=rows.filter(function(r){return r.status==='covered';}).length;
+    var w=rows.filter(function(r){return r.status==='weak';}).length;
+    var g=rows.filter(function(r){return r.status==='gap';}).length;
+    return {rows:rows,orphans:orphans,covered:c,weak:w,gap:g,pct:rows.length?Math.round(c/rows.length*100):0,u:u};
+  }
+  function allNews(){return SNAPSHOT.concat(S.news);}
+  function newsById(id){var a=allNews();for(var i=0;i<a.length;i++){if(a[i].id===id)return a[i];}return null;}
+  function hasData(k){
+    if(k==='overview')return !!(S.idea.trim()||S.intro.trim());
+    if(k==='news')return !!S.ai.news||S.news.length>0;
+    if(k==='impact')return !!S.ai.impact;
+    if(k==='risk')return !!S.ai.risk;
+    if(k==='cov'){var c=coverage();return c.rows.length>0&&c.u.tc.length>0;}
+    return !!String(S[k]||'').trim();
+  }
+
+  function localSuggest(){
+    var out=[],reqs=lines(S.req),cv=coverage(),fb=parseFB();
+    function add(p,t,w,go){out.push({priority:p,title:t,why:w,action:'',section:go,local:true});}
+    if(!S.idea.trim())add('high','Write down the product idea','Every check on this dashboard starts from the idea. Add it on this page first.','overview');
+    if(S.idea.trim()&&!reqs.length)add('high','Add your requirements','There is an idea but no requirements yet, so nothing can be tested or checked for coverage.','req');
+    if(reqs.length&&!cv.u.tc.length)add('high','Add test cases','You have '+reqs.length+' requirements and no test cases.','us');
+    var gaps=cv.rows.filter(function(r){return r.status==='gap';});
+    if(reqs.length&&cv.u.tc.length&&gaps.length)add('high',gaps.length+' requirement'+(gaps.length>1?'s have':' has')+' no story or test','Start with '+gaps.slice(0,3).map(function(r){return r.id;}).join(', ')+'. Untested requirements are where bugs reach the demo.','cov');
+    var weak=cv.rows.filter(function(r){return r.status==='weak';});
+    if(weak.length&&cv.u.tc.length)add('medium',weak.length+' requirement'+(weak.length>1?'s have':' has')+' a story but no test','Add at least one test for '+weak.slice(0,3).map(function(r){return r.id;}).join(', ')+'.','cov');
+    if(reqs.length){
+      var rt=reqs.map(toks);
+      var open=fb.filter(function(f){return f.pri==='High'&&!rt.some(function(r){return match(r,toks(f.txt));});});
+      if(open.length)add('high','High-priority feedback is not in your requirements','"'+open[0].txt.slice(0,80)+'"'+(open.length>1?' and '+(open.length-1)+' more':'')+' does not match any requirement. Decide whether to add one.','fb');
+    }
+    var cu=cuesOf([S.idea,S.intro,S.req,S.us].join(' '));
+    if(reqs.length&&cu.privacy&&!/consent|privacy/i.test(S.req))add('medium','Add a privacy requirement','Your product handles personal data such as accounts or addresses, but no requirement mentions consent or deletion.','req');
+    if(reqs.length&&!/error|fail|crash|retry/i.test(S.req))add('medium','Add an error-handling requirement','No requirement says what users see when something fails. Testers and demo audiences find this first.','req');
+    var rel=fb.filter(function(f){return /crash|slow|fail|bug|error|broke|freez/i.test(f.txt);});
+    if(rel.length)add('high','Feedback reports crashes or slowness','"'+rel[0].txt.slice(0,80)+'" blocks the main flow. Add a test for each reliability problem and fix them before new features.','fb');
+    var dl2=daysLeft(S.constraints);
+    if(dl2!==null&&dl2<=7&&reqs.length>4)add('high','Cut scope for the demo','You have about '+dl2+' days and '+reqs.length+' requirements. Choose the one flow the demo must show.','risk');
+    var un=fb.filter(function(f){return f.pri==='Unrated';}).length;
+    if(un)add('medium',un+' feedback item'+(un>1?'s have':' has')+' no priority','Start each line with High, Medium or Low so the team knows what to do first.','fb');
+    if(S.idea.trim()&&!S.ai.news)add('medium','Check the idea against industry news','Find out whether current market and regulation news supports building this idea.','news');
+    if(reqs.length&&!S.ai.risk)add('low','Run the risk predictor','See what is most likely to go wrong before the demo.','risk');
+    var order={high:0,medium:1,low:2};
+    out.sort(function(a,b){return order[a.priority]-order[b.priority];});
+    out=out.slice(0,6);
+    if(!out.length)out.push({priority:'low',title:'Nothing urgent from your data',why:'Requirements, tests and feedback line up. Ask AI for deeper suggestions or test a change in Change Impact.',action:'',section:'impact',local:true});
+    return out;
+  }
+
+  /* ---------- rendering ---------- */
+  var secLabel={};SECTIONS.forEach(function(s){secLabel[s.k]=s.t;});
+  function sugCard(s){
+    var cls=lvlCls(s.priority);
+    return '<li class="card sev-'+(cls||'ok')+'"><div class="row between"><span class="t">'+esc(s.title)+'</span><span class="pill '+cls+'">'+esc(s.priority.charAt(0).toUpperCase()+s.priority.slice(1))+'</span></div>'
+      +(s.why?'<div class="w">'+esc(s.why)+'</div>':'')+(s.action?'<div class="a"><strong>Do this:</strong> '+esc(s.action)+'</div>':'')
+      +(s.section&&secLabel[s.section]?'<button class="linkbtn" data-go="'+esc(s.section)+'">Open '+esc(secLabel[s.section])+'</button>':'')+'</li>';
+  }
+  function renderSuggest(){
+    var loc=localSuggest();
+    var h='<ul class="plain">'+loc.map(sugCard).join('')+'</ul><p class="help">Worked out from what you have entered. They update as you add data.</p>';
+    $('suggestList').innerHTML=h;
+  }
+  function renderPipe(){
+    var n=0;
+    $('pipe').innerHTML=SECTIONS.map(function(s){
+      var on=hasData(s.k);if(on)n++;
+      var d=$('dot-'+s.k);if(d)d.className='s'+(on?' on':'');
+      return '<div class="step"><div class="row between"><h3>'+esc(s.t)+'</h3><span class="pill '+(on?'ok':'')+'">'+(on?'Has data':'Waiting')+'</span></div><p>'+esc(s.d)+'</p>'+(s.k==='overview'?'':'<button class="linkbtn" data-go="'+s.k+'">Open section</button>')+'</div>';
+    }).join('');
+    var m=$('meter').children;for(var i=0;i<8;i++)m[i].className=i<n?'on':'';
+    $('progressLabel').textContent=n+' of 8 sections have data';
+    $('exov').innerHTML=exBadge('overview');
+  }
+  function renderReq(){
+    renderReqGaps();
+    var items=lines(S.req),out=$('reqOut');
+    var head='<div class="row between"><h2>Analyzed requirements</h2><span class="row">'+(items.length?'<span class="pill ok">'+items.length+' found</span>':'<span class="pill">Waiting</span>')+exBadge('req')+'</span></div>';
+    if(!items.length){out.innerHTML=head+empty('No requirements yet','Paste the requirements your workflow produced, then choose Show requirements.');return;}
+    var idea=S.idea.trim()?'<div style="margin:10px 0"><div class="label">Product idea</div><p>'+esc(S.idea)+'</p></div>':'';
+    out.innerHTML=head+idea+'<ol class="reqs" style="margin-top:10px">'+items.map(function(t,i){return '<li><span class="id">R'+pad(i+1)+'</span><span>'+esc(t)+'</span></li>';}).join('')+'</ol>';
+  }
+  function renderUS(){
+    renderUsGaps();
+    var u=parseUS(),all=u.st.length+u.tc.length+u.ot.length,out=$('usOut');
+    var head='<div class="row between"><h2>Generated output</h2><span class="row">'+(all?'<span class="pill ok">'+u.st.length+' stories, '+u.tc.length+' tests</span>':'<span class="pill">Waiting</span>')+exBadge('us')+'</span></div>';
+    if(!all){out.innerHTML=head+empty('No output yet','Paste your stories and test cases, then choose Show output.');return;}
+    function col(title,arr,cls){return '<div><h3>'+title+'<span class="label">'+arr.length+'</span></h3>'+(arr.length?'<ul class="plain">'+arr.map(function(t){return '<li class="card '+cls+'">'+esc(t)+'</li>';}).join('')+'</ul>':'<div class="label">None found</div>')+'</div>';}
+    out.innerHTML=head+'<div class="cols" style="margin-top:10px">'+col('User stories',u.st,'story')+col('Test cases',u.tc,'test')+'</div>'+(u.ot.length?'<div><h3 style="margin:12px 0 8px">Unsorted lines</h3><ul class="plain">'+u.ot.map(function(t){return '<li class="card">'+esc(t)+'</li>';}).join('')+'</ul></div>':'');
+  }
   function renderFB(){
-    var all=lines(S.fb), out=$('fbOut');
-    var head='<div class="row" style="justify-content:space-between"><h2>Feedback analysis</h2>'+(all.length?'<span class="pill ok">'+all.length+' items</span>':'<span class="pill">Waiting</span>')+exBadge('fb')+'</div>';
-    if(!all.length){out.innerHTML=head+emptyState('No feedback yet','Paste feedback items on the left, then choose Show analysis. Priorities are read from the words High, Medium and Low.');return;}
-    var groups=PRI.map(function(p){return {p:p,items:[]};});
-    all.forEach(function(l){
-      var g=groups[3];
-      for(var i=0;i<3;i++){if(PRI[i].re.test(l)){g=groups[i];break;}}
-      var txt=l.replace(/^\s*(high|critical|urgent|medium|med|low|minor|p[0-3])\s*[:\-–|]\s*/i,'');
-      g.items.push(txt);
-    });
-    var total=all.length;
-    var bar='<div class="stack" role="img" aria-label="Feedback by priority">'+groups.map(function(g){return g.items.length?'<span style="width:'+(g.items.length/total*100)+'%;background:'+g.p.c+'"></span>':'';}).join('')+'</div>';
+    var fb=parseFB(),out=$('fbOut');
+    var head='<div class="row between"><h2>Feedback analysis</h2><span class="row">'+(fb.length?'<span class="pill ok">'+fb.length+' items</span>':'<span class="pill">Waiting</span>')+exBadge('fb')+'</span></div>';
+    if(!fb.length){out.innerHTML=head+empty('No feedback yet','Paste feedback items, then choose Show analysis.');return;}
+    var groups=PRI.map(function(p){return {p:p,items:fb.filter(function(f){return f.pri===p.k;})};});
+    var bar='<div class="stack" role="img" aria-label="Feedback by priority">'+groups.map(function(g){return g.items.length?'<span style="width:'+(g.items.length/fb.length*100)+'%;background:'+g.p.c+'"></span>':'';}).join('')+'</div>';
     var legend='<div class="legend">'+groups.map(function(g){return '<span><i class="dot" style="background:'+g.p.c+'"></i>'+g.p.k+' <b>'+g.items.length+'</b></span>';}).join('')+'</div>';
-    var list='<ul class="plain">'+groups.map(function(g){return g.items.map(function(t){return '<li class="card fbitem"><span class="pill '+g.p.cls+'">'+g.p.k+'</span><span>'+esc(t)+'</span></li>';}).join('');}).join('')+'</ul>';
-    out.innerHTML=head+bar+legend+list;
+    var list='<ul class="plain">'+groups.map(function(g){return g.items.map(function(f){return '<li class="card fbitem"><span class="pill '+g.p.cls+'">'+g.p.k+'</span><span>'+esc(f.txt)+'</span></li>';}).join('');}).join('')+'</ul>';
+    out.innerHTML=head+'<div style="display:flex;flex-direction:column;gap:12px;margin-top:10px">'+bar+legend+list+'</div>';
   }
 
-  function renderAll(){renderPipe();renderReq();renderUS();renderFB();}
+  function renderNews(){
+    $('newsNote').innerHTML='<strong>Saved snapshot, '+SNAP_DATE+'.</strong> The three headlines below were collected on that date and the newest is from 25 Feb 2026. This page cannot fetch live news, so add today’s headlines yourself and they are included in the idea check.';
+    var h=allNews().map(function(n){
+      var link=n.url?'<a href="'+esc(n.url)+'" target="_blank" rel="noopener noreferrer">'+esc(n.src)+'</a>':esc(n.src||'Added by you');
+      return '<div class="news"><div class="meta">'+(n.tag?'<span class="pill">'+esc(n.tag)+'</span>':'<span class="pill ex">Added by you</span>')+'<span>'+link+(n.date?' · '+esc(n.date):'')+'</span>'
+        +(n.added?'<button class="linkbtn" data-delnews="'+esc(n.id)+'" style="margin-left:auto">Remove</button>':'')+'</div><h3>'+esc(n.title)+'</h3>'+(n.sum?'<p>'+esc(n.sum)+'</p>':'')+'</div>';
+    }).join('');
+    $('newsList').innerHTML=h;
+    renderNewsOut();
+  }
+  function evid(id){var n=newsById(str(id));return n?'<span class="label">'+esc(n.src||'Your headline')+': '+esc(n.title.slice(0,60))+(n.title.length>60?'…':'')+'</span>':(id?'<span class="label">'+esc(id)+'</span>':'');}
+  function pts(arr,withEv){
+    if(!arr||!arr.length)return '<div class="label">None</div>';
+    return '<ul class="plain">'+arr.map(function(p){return '<li class="card"><div>'+esc(p.point||p)+'</div>'+(withEv&&p.evidence?'<div style="margin-top:4px">'+evid(p.evidence)+'</div>':'')+'</li>';}).join('')+'</ul>';
+  }
+  function renderNewsOut(){
+    var r=S.ai.news,el=$('newsOut');
+    if(!r){el.innerHTML=empty('No verdict yet','Add your product idea on the Overview, then run the check.');return;}
+    var cls=r.verdict==='go'?'ok':r.verdict==='rethink'?'crit':r.verdict==='unclear'?'idle':'warn';
+    var label=r.verdict==='go'?'Go for it':r.verdict==='rethink'?'Rethink the idea':r.verdict==='unclear'?'Not enough news to judge':'Go, with changes';
+    el.innerHTML='<div class="aiout" style="border-top:0;padding-top:0"><div class="verdict"><span class="big v '+cls+'">'+(r.score==null?'\u2014':r.score)+'</span><div><div class="v '+cls+'">'+label+'</div><div class="label">Score out of 100 · Rule-based</div></div></div>'
+      +'<p>'+esc(r.summary)+'</p>'
+      +'<h3 class="mdh">What the news supports</h3>'+pts(r.tailwinds,true)
+      +'<h3 class="mdh">What the news warns about</h3>'+pts(r.headwinds,true)
+      +'<h3 class="mdh">Change your idea like this</h3>'+pts(r.changes,false)
+      +(r.general.length?'<h3 class="mdh">General industry knowledge (not from the headlines)</h3>'+pts(r.general,false):'')
+      +(r.gaps.length?'<h3 class="mdh">Not covered by these headlines</h3>'+pts(r.gaps,false):'')
+      +'<p class="help">A decision aid, not a guarantee. Check the headlines yourself before you commit.</p></div>';
+  }
 
+  function impactLocal(){
+    var ct=toks(S.change),el=$('impactLocalOut');
+    if(!S.change.trim()){el.innerHTML=empty('Describe a change first','Type the change on the left, then choose Find affected items.');return;}
+    var reqs=lines(S.req),u=parseUS();
+    function hits(arr,prefix){return arr.map(function(x,i){return {x:x,id:prefix?prefix+pad(i+1):'',n:shared(ct,toks(x))};}).filter(function(o){return o.n>=1&&match(ct,toks(o.x));});}
+    var r=hits(reqs,'R'),s=hits(u.st,''),t=hits(u.tc,'');
+    function list(title,a){return '<div><h3 style="margin-bottom:8px">'+title+' <span class="label">'+a.length+'</span></h3>'+(a.length?'<ul class="plain">'+a.map(function(o){return '<li class="card">'+(o.id?'<span class="rid">'+o.id+'</span> ':'')+esc(o.x)+'</li>';}).join('')+'</ul>':'<div class="label">No keyword match</div>')+'</div>';}
+    el.innerHTML='<div style="display:flex;flex-direction:column;gap:12px"><div class="row between"><h2>Likely affected</h2><span class="pill">Keyword match</span></div>'+list('Requirements',r)+list('User stories',s)+list('Test cases to re-run',t)+'<p class="help">This match uses shared words only. The AI analysis also finds items that are affected without sharing words.</p></div>';
+  }
+  function renderImpactOut(){
+    var r=S.ai.impact,el=$('impactOut');
+    if(!r){el.innerHTML='';return;}
+    var cls=r.severity==='high'?'crit':r.severity==='medium'?'warn':'ok';
+    function list(title,a,ref){return a.length?'<h3 class="mdh">'+title+'</h3><ul class="plain">'+a.map(function(x){return '<li class="card">'+(ref&&x.ref?'<span class="rid">'+esc(x.ref)+'</span> ':'')+esc(ref?x.why:x)+'</li>';}).join('')+'</ul>':'';}
+    el.innerHTML='<div class="aiout"><div class="row"><span class="label">Impact analysis</span><span class="pill ai">Rule-based</span><span class="pill '+cls+'">'+esc(r.severity)+' impact</span><span class="pill">Effort '+esc(r.effort)+'</span></div><p>'+esc(r.summary)+'</p>'
+      +list('Affected requirements',r.affected,true)+list('New requirements this change needs',r.newReqs,false)+list('Tests to add or update',r.tests,false)+list('Risks introduced',r.risks,false)
+      +(r.advice?'<h3 class="mdh">Recommendation</h3><p>'+esc(r.advice)+'</p>':'')+'</div>';
+  }
+
+  function renderCov(){
+    var cv=coverage(),el=$('covOut');
+    if(!cv.rows.length){el.innerHTML=empty('No requirements to check','Add requirements, stories and test cases first.');return;}
+    var seg=function(n,c){return n?'<span style="width:'+(n/cv.rows.length*100)+'%;background:'+c+'"></span>':'';};
+    var sc={covered:['ok','Covered'],weak:['warn','Weak'],gap:['crit','Gap']};
+    var tbl='<div class="tablewrap"><table><thead><tr><th>ID</th><th>Requirement</th><th>Stories</th><th>Tests</th><th>Status</th></tr></thead><tbody>'+cv.rows.map(function(r){
+      return '<tr><td class="rid">'+r.id+'</td><td>'+esc(r.text)+'</td><td class="n">'+r.stories.length+'</td><td class="n">'+r.tests.length+(r.tests.length?'<div class="help" style="margin-top:4px">'+esc(r.tests[0].slice(0,90))+(r.tests[0].length>90?'…':'')+'</div>':'')+'</td><td><span class="pill '+sc[r.status][0]+'">'+sc[r.status][1]+'</span></td></tr>';}).join('')+'</tbody></table></div>';
+    el.innerHTML='<div style="display:flex;flex-direction:column;gap:12px"><div class="row" style="gap:18px"><div><div class="big">'+cv.pct+'%</div><div class="label">Requirements with a test</div></div><div style="flex:1 1 220px;display:flex;flex-direction:column;gap:8px"><div class="stack" role="img" aria-label="Coverage split">'+seg(cv.covered,'var(--ok)')+seg(cv.weak,'var(--warn)')+seg(cv.gap,'var(--crit)')+'</div><div class="legend"><span><i class="dot" style="background:var(--ok)"></i>Covered <b>'+cv.covered+'</b></span><span><i class="dot" style="background:var(--warn)"></i>Weak <b>'+cv.weak+'</b></span><span><i class="dot" style="background:var(--crit)"></i>Gap <b>'+cv.gap+'</b></span></div></div></div>'+tbl
+      +(cv.orphans.length?'<div><h3 style="margin-bottom:8px">Tests that match no requirement <span class="label">'+cv.orphans.length+'</span></h3><ul class="plain">'+cv.orphans.map(function(t){return '<li class="card test">'+esc(t)+'</li>';}).join('')+'</ul></div>':'')+'</div>';
+  }
+
+  function signals(){
+    var reqs=lines(S.req),cv=coverage(),fb=parseFB(),hi=fb.filter(function(f){return f.pri==='High';}).length,un=fb.filter(function(f){return f.pri==='Unrated';}).length;
+    var vr=S.ai.news?S.ai.news.verdict:null;
+    var s=[
+      {k:'Test coverage',v:reqs.length?cv.pct+'%':'No data',l:!reqs.length?'idle':cv.pct>=80?'ok':cv.pct>=50?'warn':'crit'},
+      {k:'Requirements with no story or test',v:reqs.length?String(cv.gap):'No data',l:!reqs.length?'idle':cv.gap===0?'ok':cv.gap<=2?'warn':'crit'},
+      {k:'High-priority feedback',v:fb.length?String(hi):'No data',l:!fb.length?'idle':hi===0?'ok':hi<=2?'warn':'crit'},
+      {k:'Unrated feedback',v:fb.length?String(un):'No data',l:!fb.length?'idle':un===0?'ok':un<=2?'warn':'crit'},
+      {k:'Idea vs news',v:vr?(vr==='go'?'Go':vr==='rethink'?'Rethink':vr==='unclear'?'Unclear':'Go, with changes'):'Not run',l:!vr||vr==='unclear'?'idle':vr==='go'?'ok':vr==='rethink'?'crit':'warn'}
+    ];
+    var c=s.filter(function(x){return x.l==='crit';}).length,w=s.filter(function(x){return x.l==='warn';}).length,d=s.filter(function(x){return x.l!=='idle';}).length;
+    var overall=!d?null:(c>=2?'high':(c>=1||w>=2)?'medium':'low');
+    return {items:s,overall:overall};
+  }
+  function renderRisk(){
+    var sg=signals();
+    $('signals').innerHTML=sg.items.map(function(x){return '<div class="sig '+x.l+'"><span class="label">'+esc(x.k)+'</span><b>'+esc(x.v)+'</b></div>';}).join('');
+    $('sigLevel').innerHTML=sg.overall?'<span class="pill '+lvlCls(sg.overall)+'">Rule-based signal: '+sg.overall+'</span>':'<span class="pill">Add data to see signals</span>';
+    var r=S.ai.risk,el=$('riskOut');
+    if(!r){el.innerHTML=empty('No prediction yet','Choose Predict risks to get a ranked risk list with mitigations.');return;}
+    var cls=lvlCls(r.overall);
+    el.innerHTML='<div class="aiout" style="border-top:0;padding-top:0"><div class="row"><span class="label">Predicted risk</span><span class="pill ai">Rule-based</span><span class="pill '+cls+'">Overall '+esc(r.overall)+'</span></div><p>'+esc(r.headline)+'</p><ul class="plain">'
+      +r.risks.map(function(k){var sc=k.likelihood*k.impact,c=sc>=15?'crit':sc>=8?'warn':'ok';
+        return '<li class="card sev-'+c+'"><div class="row between"><span class="t">'+esc(k.risk)+'</span><span class="pill '+c+'">Score '+sc+'</span></div><div class="row"><span class="pill">'+esc(k.category)+'</span><span class="label">Likelihood '+k.likelihood+'/5 · Impact '+k.impact+'/5</span></div>'
+          +(k.mitigation?'<div class="a"><strong>Mitigation:</strong> '+esc(k.mitigation)+'</div>':'')+(k.warning?'<div class="w"><strong>Early warning:</strong> '+esc(k.warning)+'</div>':'')+'</li>';}).join('')+'</ul></div>';
+  }
+  function renderAll(){renderPipe();renderSuggest();renderReq();renderUS();renderFB();renderNews();impactLocal();renderImpactOut();renderCov();renderRisk();renderReqGaps();renderUsGaps();}
+  function renderData(){renderPipe();renderSuggest();renderCov();renderRisk();}
+
+  var dl=null;
+  /* ---------- built-in analysis (no AI connection needed) ---------- */
+  function status(k,msg,isErr){var e=$('st-'+k);if(!e)return;e.textContent=msg||'';e.className='ai-status'+(isErr?' err':'');}
+  function need(k,cond,msg){status(k,cond?'':msg,!cond);return !!cond;}
+  function sharedWords(a,b){var o=[];a.forEach(function(x){if(b.has(x))o.push(x);});return o;}
+  function daysLeft(t){var m=/(\d+)\s*(?:more\s*)?(day|week)s?/i.exec(t||'');return m?Number(m[1])*(/week/i.test(m[2])?7:1):null;}
+  function teamSize(t){var m=/(\d+)\s*(?:people|persons?|members?|students?|developers?|engineers?)/i.exec(t||'')||/team of (\d+)/i.exec(t||'');return m?Number(m[1]):null;}
+  var CUES=[
+    {k:'privacy',re:/\b(personal|privacy|medical|health|patient|address|phone|email|location|consent|account|sign.?in|login|student|child|minor)\b/i},
+    {k:'payments',re:/\b(pay|payment|wallet|upi|card|checkout|refund|billing|subscription)\b/i},
+    {k:'ai',re:/\b(ai|ml|model|predict\w*|generat\w*|recommend\w*|chatbot|llm)\b/i},
+    {k:'integration',re:/\b(import|sync|portal|api|calendar|scrap\w*|parser|integrat\w*|third.?party|webhook)\b/i},
+    {k:'realtime',re:/\b(live|real.?time|status|notification\w*|reminder\w*|tracking|stream\w*)\b/i},
+    {k:'hardware',re:/\b(vr|ar|haptic|device|sensor|headset|hardware|camera|bluetooth)\b/i},
+    {k:'content',re:/\b(upload\w*|document\w*|pdf|file\w*|image\w*|video\w*)\b/i}
+  ];
+  function cuesOf(text){var o={};CUES.forEach(function(c){if(c.re.test(text))o[c.k]=true;});return o;}
+  function productText(){return [S.idea,S.intro,S.req,S.us].join(' \n ');}
+  var POS=/\b(grow\w*|raise[sd]?|funding|invest\w*|launch\w*|adopt\w*|demand|expand\w*|record|partner\w*|approv\w*|boom\w*|surge\w*|increase\w*|opportunit\w*|subsid\w*|grant\w*)\b/i;
+  var NEG=/\b(block\w*|ban(?:s|ned)?|restrict\w*|strict|fine[sd]?|penalt\w*|cap(?:s|ped)?|lawsuit\w*|compliance|pressure|squeez\w*|shut\w*|firewall\w*|layoff\w*|breach\w*|regulat\w*|tax\w*|declin\w*|loss\w*|crack\w*|mandat\w*|costs?)\b/i;
+
+  var NFR=[
+    {k:'Error handling',re:/\b(error|fail\w*|crash\w*|retry|offline|fallback|invalid)\b/i,tip:'Say what users see when a request fails or the network drops.'},
+    {k:'Performance',re:/\b(second\w*|latency|fast|loads?|loading|performance|within \d+)\b/i,tip:'Give a measurable target, for example the main screen loads in under 3 seconds.'},
+    {k:'Accessibility',re:/\b(accessib\w*|keyboard|screen reader|contrast|mobile)\b/i,tip:'Say how the main flow works on a phone and with a keyboard.'},
+    {k:'Privacy and consent',when:'privacy',re:/\b(privacy|consent|delet\w*|personal data|permission)\b/i,tip:'Say what personal data is stored, why, and how a user removes it.'},
+    {k:'Security',when:'privacy',re:/\b(secur\w*|encrypt\w*|authenticat\w*|authoriz\w*|role|access control)\b/i,tip:'Say who may see or change what, and how data is protected.'},
+    {k:'Payment failures and refunds',when:'payments',re:/\b(refund|failed payment|payment fail\w*|chargeback)\b/i,tip:'Say what happens when a payment fails or is refunded.'},
+    {k:'Checking generated output',when:'ai',re:/\b(accura\w*|verify|cite|source|confidence|human review)\b/i,tip:'Say how users can check generated output and report mistakes.'},
+    {k:'File types and limits',when:'content',re:/\b(size limit|file type|format|corrupt\w*|unsupported|malware|scan)\b/i,tip:'Say which file types and sizes are accepted and what happens to bad files.'},
+    {k:'Outside service failure',when:'integration',re:/\b(fallback|manual|unavailable|rate limit|timeout|downtime)\b/i,tip:'Say what happens when the outside service is down or blocks access.'}
+  ];
+  function ruleBlock(label,html){return '<div class="aiout"><div class="row"><span class="label">'+esc(label)+'</span><span class="pill ai">Rule-based</span></div>'+html+'</div>';}
+  function renderReqGaps(){
+    var el=$('reqGaps'),reqs=lines(S.req);
+    if(!reqs.length){el.innerHTML='';return;}
+    var cues=cuesOf(productText());
+    var gaps=NFR.filter(function(n){return (!n.when||cues[n.when])&&!n.re.test(S.req);}).slice(0,6);
+    el.innerHTML=ruleBlock('Possible gaps',gaps.length?'<ul class="plain">'+gaps.map(function(g){return '<li class="card sev-warn"><div class="t">'+esc(g.k)+'</div><div class="w">'+esc(g.tip)+'</div></li>';}).join('')+'</ul><p class="help">Found by looking for these topics in your requirements. Add a requirement for each one that matters to your product.</p>':'<p>Your requirements mention the common areas: errors, performance, accessibility and the topics your product touches.</p>');
+  }
+  function renderUsGaps(){
+    var el=$('usGaps'),cv=coverage();
+    if(!cv.rows.length){el.innerHTML='';return;}
+    var need1=cv.rows.filter(function(r){return !r.stories.length;});
+    el.innerHTML=ruleBlock('Stories still needed',need1.length?'<ul class="plain">'+need1.map(function(r){return '<li class="card sev-warn"><span class="rid">'+r.id+'</span> '+esc(r.text)+'<div class="w">No user story shares words with this requirement.</div></li>';}).join('')+'</ul>':'<p>Every requirement has at least one matching user story.</p>');
+  }
+
+  var RUN={
+    news:function(){
+      if(!need('news',S.idea.trim(),'Add your product idea on the Overview first.'))return;
+      var pt=toks(productText()),all=allNews(),rel=[];
+      all.forEach(function(n){
+        var txt=n.title+' '+(n.sum||''),w=sharedWords(pt,toks(txt));
+        if(w.length>=2)rel.push({n:n,w:w.slice(0,4),neg:NEG.test(txt),pos:POS.test(txt)});
+      });
+      var warn=rel.filter(function(r){return r.neg;}),sup=rel.filter(function(r){return r.pos&&!r.neg;});
+      var score=rel.length?Math.max(15,Math.min(90,65+10*sup.length-6*warn.length)):null;
+      var verdict=!rel.length?'unclear':score>=70?'go':score>=40?'go_with_changes':'rethink';
+      var cues=cuesOf(productText()),changes=[];
+      warn.slice(0,2).forEach(function(r){changes.push('Plan for the risk in "'+r.n.title.slice(0,90)+'" before you build the part of the product it touches.');});
+      if(cues.privacy)changes.push('Add consent, data deletion and a privacy notice before launch.');
+      if(cues.integration)changes.push('Offer a manual fallback in case an outside service blocks you or changes its interface.');
+      if(cues.ai)changes.push('Show users how to check generated output and report mistakes.');
+      if(cues.payments)changes.push('Decide how failed payments and refunds work before the demo.');
+      if(cues.hardware)changes.push('Test on the real device early, not only in a simulator.');
+      changes.push('Talk to 5 to 10 people who have this problem before adding more features.');
+      var gaps=['Verdicts come from keyword matching on the headlines listed here. Read the sources before you decide.'];
+      if(!S.news.length)gaps.unshift('You have not added any headlines of your own. The saved snapshot is about food delivery in India.');
+      if(!rel.length)gaps.unshift('No headline shares enough words with your idea to support or warn against it.');
+      S.ai.news={verdict:verdict,score:score,
+        summary:rel.length?rel.length+' of '+all.length+' headlines match your idea: '+sup.length+' supportive and '+warn.length+' warning.':'None of the '+all.length+' headlines match your idea, so the news cannot confirm or reject it. Add current headlines about your industry and run the check again.',
+        tailwinds:sup.map(function(r){return {point:'This headline points to growth or demand. It shares the words: '+r.w.join(', ')+'.',evidence:r.n.id};}),
+        headwinds:warn.map(function(r){return {point:'This headline points to a cost, rule or barrier. It shares the words: '+r.w.join(', ')+'.',evidence:r.n.id};}),
+        changes:changes,general:[],gaps:gaps};
+      status('news','');save();renderNewsOut();renderData();
+    },
+    impact:function(){
+      if(!need('impact',S.change.trim(),'Describe the change first.'))return;
+      impactLocal();
+      var ct=toks(S.change),reqs=lines(S.req),u=parseUS(),cv=coverage(),cues=cuesOf(S.change);
+      var affected=[];
+      reqs.forEach(function(r,i){var rt=toks(r);if(match(ct,rt))affected.push({ref:'R'+pad(i+1),why:r+' (shares: '+sharedWords(ct,rt).slice(0,3).join(', ')+')'});});
+      var tests=u.tc.filter(function(t){return match(ct,toks(t));});
+      var newReqs=[],todo=[],risks=[];
+      if(cues.privacy)newReqs.push('State how personal data is handled after this change.');
+      if(cues.payments)newReqs.push('Say what happens to payments and refunds under this change.');
+      if(cues.integration)newReqs.push('Say what happens when the outside service is unavailable or blocks access.');
+      if(cues.content)newReqs.push('List accepted file types and size limits.');
+      if(cues.realtime)newReqs.push('Set a time limit for updates, for example within 10 seconds.');
+      var migrate=/\b(replace|migrat\w*|rewrite|framework|switch|instead)\b/i.test(S.change);
+      if(migrate){newReqs.push('Plan the migration and a way back if the new version fails.');risks.push('Existing users or data may break during the switch.');}
+      tests.forEach(function(t){todo.push('Re-run: '+t);});
+      affected.forEach(function(a){var row=cv.rows.filter(function(r){return r.id===a.ref;})[0];if(row&&!row.tests.length)todo.push('Add a test for '+a.ref+', which has none.');});
+      if(affected.length>=3)risks.push('Many requirements change at once, so plan extra time to retest.');
+      if(!affected.length)risks.push('Nothing in your requirements matches, so this may be new scope.');
+      var days=daysLeft(S.constraints);
+      if(days!==null&&days<=7)risks.push('You have about '+days+' days left. Anything this size competes with finishing the demo.');
+      var sev=(affected.length>=3||((cues.payments||cues.privacy)&&affected.length>=1))?'high':(affected.length>=1||Object.keys(cues).length)?'medium':'low';
+      var pts=affected.length+newReqs.length+(migrate?2:0),eff=pts<=1?'S':pts<=4?'M':'L';
+      S.ai.impact={
+        summary:affected.length?'This change touches '+affected.length+' requirement'+(affected.length>1?'s':'')+' and '+tests.length+' existing test'+(tests.length===1?'':'s')+'.':'No requirement shares words with this change. Decide whether it belongs in your scope.',
+        severity:sev,effort:eff,affected:affected,newReqs:newReqs,tests:todo,risks:risks,
+        advice:sev==='high'?'Split it into smaller steps and build the riskiest step first. Do not start it right before the demo.':sev==='medium'?'Build the smallest version first, then retest the affected requirements.':'Safe to build now. Retest the items listed.'};
+      status('impact','');save();renderImpactOut();renderData();
+    },
+    risk:function(){
+      if(!need('risk',S.idea.trim()||S.req.trim(),'Add a product idea or requirements first.'))return;
+      var reqs=lines(S.req),cv=coverage(),fb=parseFB(),cues=cuesOf(productText()),days=daysLeft(S.constraints),team=teamSize(S.constraints),R=[];
+      function add(risk,cat,l,i,mit,warn){R.push({risk:risk,category:cat,likelihood:l,impact:i,mitigation:mit,warning:warn});}
+      if(days!==null&&days<=14)add('Not enough time to finish everything before the demo ('+days+' day'+(days===1?'':'s')+' left)','Scope',days<=3?5:days<=7?4:3,4,'List the one flow the demo must show and cut everything else.','Work is still being added in the last 3 days.');
+      else if(reqs.length>=8)add('Scope grows beyond what the team can finish','Scope',3,4,'Freeze the must-have requirements and park the rest.','New features keep appearing in standups.');
+      if(team!==null&&team<=3&&reqs.length>=4)add('Too few people for '+reqs.length+' requirements','Team',3,3,'Split work by requirement and review each other’s work daily.','One person is blocking everyone else.');
+      if(!reqs.length)add('Requirements are not written down yet','Scope',4,4,'Write the core requirements before building more.','Teammates describe the product differently.');
+      else if(cv.pct<80){var g=cv.rows.filter(function(r){return r.status!=='covered';}).slice(0,3).map(function(r){return r.id;}).join(', ');add('Untested requirements fail during the demo ('+cv.pct+'% covered)','Quality',cv.pct<30?5:cv.pct<60?4:3,4,'Write a test for '+g+' first.','The demo needs manual fixes to work.');}
+      var hi=fb.filter(function(f){return f.pri==='High';});
+      if(hi.length)add('Known high-priority problems are still open ('+hi.length+')','Quality',hi.length>=3?5:4,4,'Fix first: '+hi[0].txt.slice(0,100)+'.','Testers hit the same problem twice.');
+      if(cues.privacy&&!/consent|privacy/i.test(S.req))add('Personal data is handled without a consent and deletion plan','Regulatory',3,5,'Add consent and deletion requirements and store only what you need.','Nobody can say where user data is stored.');
+      if(cues.payments)add('Failed payments or refunds are not handled','Technical',3,4,'Write the failed-payment and refund flows before the demo.','Payments only work on the happy path.');
+      if(cues.ai){add('Generated output is wrong and users cannot tell','Quality',3,4,'Show sources or checks next to generated output and let users report mistakes.','Testers stop trusting the output.');
+        if(/no budget|free|no paid|zero budget/i.test(S.constraints))add('Free usage limits run out during testing or the demo','Technical',4,3,'Cache results and test with small inputs.','Requests start failing after a few tries.');}
+      if(cues.integration)add('An outside service fails, changes or blocks access','Technical',4,4,'Add a manual fallback and test with the service switched off.','Imports work on your machine but not on a teammate’s.');
+      if(cues.hardware)add('The device behaves differently from the simulator','Technical',3,4,'Test on the real device from the first week.','Features only work in the simulator.');
+      if(cues.content)add('Uploaded files in unexpected formats break the flow','Quality',3,3,'List accepted types and sizes and show a clear message for the rest.','A teammate’s file crashes the upload.');
+      if(cues.realtime)add('Live updates arrive late or are lost','Technical',3,3,'Set a time target and test on a slow connection.','Status screens show old data.');
+      var nv=S.ai.news;
+      if(nv&&nv.verdict==='rethink')add('Industry news weighs against the idea','Market',4,5,'Revisit the idea using the News Panel suggestions.','More warning headlines than supportive ones.');
+      else if(nv&&nv.headwinds.length)add('Headlines flag costs or rules that affect the idea','Market',3,3,'Plan for them using the News Panel suggestions.','Rules or fees change before launch.');
+      if(R.length<5)add('Real users do not want this enough','Market',3,4,'Show a prototype to 5 to 10 target users this week.','Users admire it but do not try it.');
+      R.sort(function(a,b){return b.likelihood*b.impact-a.likelihood*a.impact;});R=R.slice(0,8);
+      var top=R[0].likelihood*R[0].impact,big=R.filter(function(x){return x.likelihood*x.impact>=15;}).length;
+      var overall=(top>=20||big>=2)?'high':top>=10?'medium':'low';
+      S.ai.risk={overall:overall,headline:R.length+' risks found. The biggest is: '+R[0].risk+'.',risks:R.map(function(x){return {risk:x.risk,category:x.category,likelihood:x.likelihood,impact:x.impact,mitigation:x.mitigation,warning:x.warning};})};
+      status('risk','');save();renderRisk();renderData();
+    }
+  };
+
+  /* ---------- export, report, clear ---------- */
+  function today(){var d=new Date();return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());}
+  function toast(m,err){var t=$('toast');t.textContent=m;t.className=err?'err':'';clearTimeout(toast.h);toast.h=setTimeout(function(){t.textContent='';},6000);}
+  async function saveFile(name,text){
+    if(!dl){toast('Downloads are not available in this view.',true);return;}
+    try{await dl.save({filename:name,data:text});toast('Saved '+name+'.');}
+    catch(e){e=e||{};toast(e.code==='declined'?'Save cancelled.':'Could not save the file ('+(e.code||'error')+').',e.code!=='declined');}
+  }
+  function report(){
+    var L=[],reqs=lines(S.req),u=parseUS(),fb=parseFB(),cv=coverage(),sg=signals();
+    function bl(a){return a.length?a.map(function(x){return '- '+x;}).join('\n'):'- None';}
+    L.push('# ProductPilot AI report','Generated '+today(),'');
+    L.push('## Overview','**Status:** '+S.stage,'','**Product idea:** '+(S.idea.trim()||'Not given'),'','**Introduction:** '+(S.intro.trim()||'Not given'),'');
+    L.push('## Next best actions',bl(localSuggest().map(function(s){return '['+s.priority+'] '+s.title+(s.why?': '+s.why:'');})),'');
+    L.push('## Requirements',reqs.length?reqs.map(function(r,i){return 'R'+pad(i+1)+'. '+r;}).join('\n'):'None','');
+    L.push('## User stories',bl(u.st),'','## Test cases',bl(u.tc),'');
+    L.push('## Feedback',bl(fb.map(function(f){return '['+f.pri+'] '+f.txt;})),'');
+    L.push('## Requirement to test coverage');
+    if(cv.rows.length){L.push('Coverage: '+cv.pct+'% ('+cv.covered+' covered, '+cv.weak+' weak, '+cv.gap+' gaps)','','| ID | Requirement | Stories | Tests | Status |','|---|---|---|---|---|');cv.rows.forEach(function(r){L.push('| '+r.id+' | '+r.text.replace(/\|/g,'/')+' | '+r.stories.length+' | '+r.tests.length+' | '+r.status+' |');});L.push('');}else L.push('No data','');
+    L.push('## Industry news check','Headlines (snapshot '+SNAP_DATE+' plus any you added):',bl(allNews().map(function(n){return n.title+(n.src?' ('+n.src+(n.date?', '+n.date:'')+')':'');})),'');
+    if(S.ai.news){var n=S.ai.news;L.push('**Verdict:** '+n.verdict.replace(/_/g,' ')+' ('+n.score+'/100)','',n.summary,'','Supported by:',bl(n.tailwinds.map(function(x){return x.point;})),'','Warnings:',bl(n.headwinds.map(function(x){return x.point;})),'','Suggested changes:',bl(n.changes),'');}
+    L.push('## Change impact');
+    if(S.change.trim())L.push('**Proposed change:** '+S.change.trim(),'');
+    if(S.ai.impact){var im=S.ai.impact;L.push(im.summary,'','Severity '+im.severity+', effort '+im.effort,'','Affected:',bl(im.affected.map(function(x){return x.ref+': '+x.why;})),'','Recommendation: '+im.advice,'');}else L.push('Not run','');
+    L.push('## Risk','Rule-based signals:',bl(sg.items.map(function(x){return x.k+': '+x.v;})),'');
+    if(S.ai.risk){var rk=S.ai.risk;L.push('**Predicted overall risk:** '+rk.overall,'',rk.headline,'');rk.risks.forEach(function(k){L.push('- **'+k.risk+'** ('+k.category+', score '+k.likelihood*k.impact+'): '+k.mitigation);});L.push('');}
+    return L.join('\n');
+  }
+  function syncInputs(){
+    $('idea').value=S.idea;$('intro').value=S.intro;$('stage').value=S.stage;$('reqIn').value=S.req;$('usIn').value=S.us;$('fbIn').value=S.fb;$('change').value=S.change;$('constraints').value=S.constraints;
+  }
+
+  /* ---------- wiring ---------- */
   function showTab(k){
-    SECTIONS.forEach(function(s){
-      var sel=s.k===k;
-      $('panel-'+s.k).hidden=!sel;
-      $('tab-'+s.k).setAttribute('aria-selected',sel?'true':'false');
-    });
+    SECTIONS.forEach(function(s){var sel=s.k===k;$('panel-'+s.k).hidden=!sel;$('tab-'+s.k).setAttribute('aria-selected',sel?'true':'false');});
   }
-
-  // init values
-  $('name').value=S.name; $('intro').value=S.intro; $('stage').value=S.stage; $('idea').value=S.idea;
-  $('reqIn').value=S.req; $('usIn').value=S.us; $('fbIn').value=S.fb;
-
-  $('name').addEventListener('input',function(){S.name=this.value;save();renderPipe();});
-  $('intro').addEventListener('input',function(){S.intro=this.value;save();renderPipe();});
-  $('stage').addEventListener('change',function(){S.stage=this.value;save();});
-  $('idea').addEventListener('input',function(){S.idea=this.value;save();});
-
   var INPUT={req:'reqIn',us:'usIn',fb:'fbIn'};
   var RENDER={req:renderReq,us:renderUS,fb:renderFB};
+  function bindInput(id,key,after){$(id).addEventListener('input',function(){S[key]=this.value;if(key==='idea'||key==='intro')delete S.ex.overview;save();if(after)after();});}
+  bindInput('idea','idea',renderData);bindInput('intro','intro',renderData);bindInput('change','change');bindInput('constraints','constraints');
+  $('stage').addEventListener('change',function(){S.stage=this.value;save();});
+
   document.addEventListener('click',function(e){
-    var t=e.target.closest('button'); if(!t)return;
+    var t=e.target.closest('button');if(!t)return;
     if(t.dataset.tab){showTab(t.dataset.tab);return;}
-    if(t.dataset.go){showTab(t.dataset.go);return;}
+    if(t.dataset.go){showTab(t.dataset.go);window.scrollTo(0,0);return;}
+    if(t.dataset.run){if(RUN[t.dataset.run])RUN[t.dataset.run]();return;}
+    if(t.dataset.delnews){S.news=S.news.filter(function(n){return n.id!==t.dataset.delnews;});save();renderNews();renderData();return;}
     var k;
-    if(t.dataset.show){k=t.dataset.show;var v=$(INPUT[k]).value;S[k]=v;if(S.ex[k]&&v!==EXAMPLES[k])delete S.ex[k];save();RENDER[k]();renderPipe();}
-    if(t.dataset.example){k=t.dataset.example;$(INPUT[k]).value=EXAMPLES[k];S[k]=EXAMPLES[k];S.ex[k]=true;save();RENDER[k]();renderPipe();}
-    if(t.dataset.clear){k=t.dataset.clear;$(INPUT[k]).value='';S[k]='';delete S.ex[k];if(k==='req'){S.idea='';$('idea').value='';}save();RENDER[k]();renderPipe();}
+    if(t.dataset.show){k=t.dataset.show;var v=$(INPUT[k]).value;S[k]=v;if(S.ex[k]&&v!==EXAMPLES[k])delete S.ex[k];save();RENDER[k]();renderData();}
+    if(t.dataset.example){k=t.dataset.example;$(INPUT[k]).value=EXAMPLES[k];S[k]=EXAMPLES[k];S.ex[k]=true;save();RENDER[k]();renderData();}
+    if(t.dataset.clear){k=t.dataset.clear;$(INPUT[k]).value='';S[k]='';delete S.ex[k];save();RENDER[k]();renderData();}
+  });
+  $('exOverview').addEventListener('click',function(){S.idea=EXAMPLES.idea;S.intro=EXAMPLES.intro;S.ex.overview=true;$('idea').value=S.idea;$('intro').value=S.intro;save();renderData();});
+  $('exChange').addEventListener('click',function(){S.change=EXAMPLES.change;$('change').value=S.change;save();});
+  $('newsAdd').addEventListener('click',function(){
+    var ti=$('newsTitle').value.trim();if(!ti){toast('Type a headline first.',true);return;}
+    S.news.push({id:'u'+Date.now(),title:ti.slice(0,200),sum:$('newsDetail').value.trim().slice(0,300),src:'',date:'',added:true});
+    $('newsTitle').value='';$('newsDetail').value='';save();renderNews();renderData();
+  });
+  $('btnExport').addEventListener('click',function(){saveFile('productpilot-ai-data-'+today()+'.json',JSON.stringify({app:'ProductPilot AI',exportedAt:new Date().toISOString(),data:S},null,2));});
+  $('btnReport').addEventListener('click',function(){saveFile('productpilot-ai-report-'+today()+'.md',report());});
+  $('btnClear').addEventListener('click',function(){$('btnClear').hidden=true;$('clearConfirm').hidden=false;$('clearYes').focus();});
+  $('clearNo').addEventListener('click',function(){$('clearConfirm').hidden=true;$('btnClear').hidden=false;$('btnClear').focus();});
+  $('clearYes').addEventListener('click',function(){
+    S=DEF();try{localStorage.removeItem(KEY);localStorage.removeItem(OLD);}catch(e){}
+    syncInputs();$('newsTitle').value='';$('newsDetail').value='';
+    ['news','impact','risk'].forEach(function(k){status(k,'');});
+    renderAll();$('clearConfirm').hidden=true;$('btnClear').hidden=false;toast('All data cleared.');showTab('overview');
   });
   document.querySelector('nav.tabs').addEventListener('keydown',function(e){
     if(e.key!=='ArrowRight'&&e.key!=='ArrowLeft')return;
     var ks=SECTIONS.map(function(s){return s.k;});
     var cur=ks.findIndex(function(k){return $('tab-'+k).getAttribute('aria-selected')==='true';});
-    var nx=(cur+(e.key==='ArrowRight'?1:-1)+ks.length)%ks.length;
-    showTab(ks[nx]);$('tab-'+ks[nx]).focus();
+    var nx=(cur+(e.key==='ArrowRight'?1:-1)+ks.length)%ks.length;showTab(ks[nx]);$('tab-'+ks[nx]).focus();
   });
 
-  // ---- Export: writes the current data into a copy of this page ----
-  function buildExport(snap){
-    var root=document.documentElement.cloneNode(true);
-    Array.prototype.slice.call(root.querySelectorAll('script')).forEach(function(s){
-      if(s.textContent.indexOf('SNAPSHOT_START')<0)s.parentNode.removeChild(s);
-    });
-    var sc=root.querySelector('script');
-    var json=JSON.stringify(snap).replace(/</g,'\\u003c').replace(/\u2028/g,'\\u2028').replace(/\u2029/g,'\\u2029').replace(/\*\//g,'*\\/');
-    sc.textContent=sc.textContent.replace(/\/\*SNAPSHOT_START\*\/[\s\S]*?\/\*SNAPSHOT_END\*\//,function(){
-      return '/*SNAPSHOT_'+'START*/var SNAPSHOT='+json+';/*SNAPSHOT_'+'END*/';
-    });
-    return '<!doctype html>\n'+root.outerHTML;
-  }
-  function exportMsg(t){$('exportMsg').textContent=t;}
-  function deliver(fname,html){
-    function viaBlob(){
-      try{
-        var a=document.createElement('a');
-        a.href=URL.createObjectURL(new Blob([html],{type:'text/html'}));
-        a.download=fname;document.body.appendChild(a);a.click();a.remove();
-        exportMsg('Download started: '+fname);
-      }catch(e){exportMsg('Download blocked here. Open the dashboard in its own tab and try again.');}
-    }
-    if(window.claude&&typeof window.claude.use==='function'){
-      window.claude.use('downloads').then(function(d){
-        if(!d){viaBlob();return;}
-        d.save({filename:fname,data:html}).then(function(){exportMsg('Saved '+fname);},function(err){
-          exportMsg(err&&err.code==='declined'?'Save cancelled.':'Could not save from this view.');
-        });
-      },viaBlob);
-    }else viaBlob();
-  }
-  $('exportBtn').addEventListener('click',function(){
-    var snap=JSON.parse(JSON.stringify(S));
-    snap.name=$('name').value;snap.intro=$('intro').value;snap.stage=$('stage').value;snap.idea=$('idea').value;
-    ['req','us','fb'].forEach(function(k){
-      var v=$(INPUT[k]).value;snap[k]=v;
-      if(snap.ex&&snap.ex[k]&&v!==EXAMPLES[k])delete snap.ex[k];
-    });
-    snap.savedAt=Date.now();
-    var html;
-    try{html=buildExport(snap);}catch(e){exportMsg('Export failed.');return;}
-    var slug=String(snap.name||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,40);
-    deliver((slug||'productpilot-dashboard')+'.html',html);
-  });
+  syncInputs();renderAll();
 
-  renderAll();
+  (async function(){
+    try{if(window.claude&&window.claude.use)dl=await window.claude.use('downloads');}catch(e){}
+    $('btnExport').disabled=!dl;$('btnReport').disabled=!dl;
+    if(!dl){$('btnExport').hidden=true;$('btnReport').hidden=true;}
+  })();
 })();
-
-// Function to send the product idea text box input to your running backend server
-async function submitProductIdea() {
-  
-    // 1. Grab the text from your Product Idea input area
-    const textAreas = document.querySelectorAll('textarea');
-    const ideaInput = textAreas[0]; 
-    const ideaText = ideaInput ? ideaInput.value.trim() : '';
-
-    if (!ideaText) {
-        alert("Please enter a product idea first!");
-        return;
-    }
-
-    try {
-        // 2. Pass the data to your backend server route
-        const response = await fetch('http://localhost:5000/api/define/requirements', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ idea: ideaText })
-        });
-
-        const result = await response.json();
-
-        // 3. Process the backend response and display it on the screen
-        if (response.ok && result.status === "success") {
-            displayRequirements(result.data);
-        } else {
-            console.error("Backend Error:", result.error);
-        }
-    } catch (error) {
-        console.error("Connection failed:", error);
-    }
-}
-
-// Function to dynamically insert the generated requirements into your layout cards
-function displayRequirements(requirements) {
-    const rightPanelContainer = document.querySelector('.card.bg-slate-800 p') || 
-                                document.querySelector('.flex.flex-col.gap-4 p');
-
-    if (rightPanelContainer) {
-        const parentCard = rightPanelContainer.closest('.card') || rightPanelContainer.parentElement;
-        parentCard.innerHTML = '<h3 style="color: white; font-size: 18px; font-weight: bold; margin-bottom: 16px;">Analyzed Requirements</h3>'; 
-        
-        requirements.forEach((req, index) => {
-            const cardHTML = `
-                <div style="margin-bottom: 12px; padding: 16px; background: #1e293b; border: 1px solid #334155; border-radius: 8px; text-align: left;">
-                    <div style="color: #38bdf8; font-weight: bold; font-size: 13px; margin-bottom: 4px;">SYSTEM ID: R-0${index + 1} | TYPE: ${req.type.toUpperCase()}</div>
-                    <div style="color: #e2e8f0; font-size: 14px; line-height: 1.5;">${req.description}</div>
-                </div>`;
-            parentCard.insertAdjacentHTML('beforeend', cardHTML);
-        });
-        alert("Success! Live backend data loaded cleanly into your dashboard.");
-    } else {
-        alert("Requirements fetched, refreshing interface layout details!");
-    }
-}
-
-// Attach this script connection to your frontend 'Show requirements' action button
-document.addEventListener('DOMContentLoaded', () => {
-    const submitButton = document.querySelector('button.btn-primary') || document.querySelector('button');
-    if (submitButton) {
-        submitButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            submitProductIdea();
-        });
-    }
-});
-
 </script>
 
 </body></html>
