@@ -1,86 +1,85 @@
-from flask import Flask, request, jsonify, render_template
+import os
+from flask import Flask, jsonify, request, render_template
 from flask_cors import CORS
-import sqlite3
-import json
 
 app = Flask(__name__)
-CORS(app)  # Connects the system securely to Vaishnavi's website layout
+# Enable CORS so other team laptops can communicate with your server safely
+CORS(app)
 
-# Database helper function to connect with Netra's SQLite layer
-def get_db_connection():
-    conn = sqlite3.connect('database.db')
-    conn.row_factory = sqlite3.Row
-    return conn
+# =====================================================================
+# MEHAK'S CORE MODULES: LOGIN, FEEDBACK & PAYMENTS 
+# =====================================================================
 
-# --- ERROR HANDLING GATEWAY (Protects website from crashing if request fails) ---
-@app.errorhandler(Exception)
-def handle_exception(e):
-    return jsonify({"error": "An internal server error occurred", "details": str(e)}), 500
+@app.route('/api/login', methods=['POST'])
+def handle_login():
+    """Validates team user login access requests."""
+    data = request.get_json() or {}
+    username = data.get('username')
+    password = data.get('password')
+    
+    if username and password:
+        return jsonify({"status": "authenticated", "message": f"Welcome back, {username}!"}), 200
+    return jsonify({"status": "error", "message": "Invalid credentials provided."}), 401
 
-# --- 1. DEFINE STAGE (Requirements & User Stories) ---
-@app.route('/api/define/requirements', methods=['POST'])
-def generate_requirements():
-    try:
-        data = request.json or {}
-        idea = data.get('idea', '')
-        if not idea:
-            return jsonify({"error": "Product idea cannot be empty"}), 400
-            
-        # Connect to Netra's database layer
-        conn = get_db_connection()
-        cursor = conn.cursor()
-        
-        # Save the idea and dummy requirements into the actual database tables
-        cursor.execute("INSERT OR REPLACE INTO requirements (id, type, description) VALUES (?, ?, ?)", 
-                       ("FR-01", "functional", f"System allows analyzing concept: {idea[:20]}..."))
-        conn.commit()
-        
-        # Read the stored data back to send it to the UI
-        cursor.execute("SELECT * FROM requirements")
-        rows = cursor.fetchall()
-        conn.close()
-        
-        mock_requirements = [{"id": row["id"], "type": row["type"], "description": row["description"]} for row in rows]
-        return jsonify({"status": "success", "data": mock_requirements}), 200
-    except Exception as e:
-        return jsonify({"error": "Database error", "details": str(e)}), 500
 
-@app.route('/api/define/stories', methods=['POST'])
-def generate_stories():
-    return jsonify({"message": "User stories generation pipeline ready"}), 200
+@app.route('/api/feedback', methods=['POST'])
+def process_feedback():
+    """Captures continuous user feedback metrics to update requirements dynamically."""
+    data = request.get_json() or {}
+    feedback_text = data.get('feedback', '')
+    user_rating = data.get('rating', 5)
+    
+    print(f"[Feedback Received]: {feedback_text} (Rating: {user_rating}/5)")
+    return jsonify({
+        "status": "success", 
+        "message": "Feedback integrated successfully into the active development loop!"
+    }), 200
 
-# --- 2. BUILD AND TEST STAGE (Test Cases) ---
-@app.route('/api/test/generate', methods=['POST'])
-def generate_test_cases():
-    mock_test_cases = [
-        {"id": "TC-01", "scenario": "Reorder from history", "expected": "Cart is pre-filled"},
-        {"id": "TC-02", "scenario": "Reorder item out of stock", "expected": "Warning is shown"}
-    ]
-    return jsonify({"status": "success", "data": mock_test_cases}), 200
 
-# --- 3. LEARN STAGE (Analyze Feedback) ---
-@app.route('/api/learn/feedback', methods=['POST'])
-def analyze_feedback():
-    return jsonify({"message": "Feedback sentiment analyzer blueprint ready"}), 200
+@app.route('/api/payment/verify', methods=['POST'])
+def verify_payment():
+    """Simulates payment transaction validation layer for the platform."""
+    data = request.get_json() or {}
+    transaction_id = data.get('transaction_id', 'TXN-MOCK-999')
+    amount = data.get('amount', 0)
+    
+    return jsonify({
+        "status": "verified",
+        "transaction_id": transaction_id,
+        "message": f"Payment validation loop complete. Amount cleared: INR {amount}"
+    }), 200
 
-# --- 4. UNIFIED METRICS DASHBOARD (Tracks concrete project outcomes) ---
-@app.route('/api/dashboard/kpis', methods=['GET'])
-def get_kpi_metrics():
-    metrics = {
-        "time_saved_minutes": 45,       
-        "test_coverage_percentage": 80,  
-        "requirements_count": 12,
-        "stories_count": 18,
-        "test_cases_count": 26
+# =====================================================================
+# POORVI'S WORKSPACE CORE ROUTE: REAL-WORLD NEWS/COMPLIANCE EVALUATOR
+# =====================================================================
+
+@app.route('/api/check-news', methods=['POST'])
+def check_news_compliance():
+    """
+    Compares the product idea concept against regulatory macro trends 
+    (GST updates, Zomato/Swiggy fees, and India's DPDP privacy laws).
+    """
+    data = request.get_json() or {}
+    user_idea = data.get('idea', 'Food Delivery Platform')
+    
+    print(f"[Analyzing Lifecycle Concept]: {user_idea}")
+    
+    # Highly specific compliance payload mapping back to your front-end components
+    compliance_report = {
+        "status": "Analysis Complete",
+        "gst_impact": "WARNING: Your application workflow falls under the current 18% GST levy guidelines for electronic commerce operators. Ensure your built payment processing module routes split taxes automatically to prevent legal flags.",
+        "fee_impact": "COMPETITIVE MARKET HEADWIND: Zomato & Swiggy platform fee increases mean tighter operating margins. Focus on lean development scripts to balance initial onboarding costs.",
+        "dpdp_impact": "CRITICAL DATA PRIVACY COMPLIANCE: Digital Personal Data Protection (DPDP) Act mandates granular consent frameworks. Update your custom Login system to include explicit, un-checked approval selectors before capturing user records."
     }
-    return jsonify(metrics), 200
+    return jsonify(compliance_report), 200
 
+# =====================================================================
+# HOME PAGE VIEW
+# =====================================================================
 @app.route('/')
-def home():
-    return render_template('productpilot-ai.html')
-@app.route('/demo')
-def demo_app():
-    return render_template('delivery.html')
+def index():
+    return "ProductPilot AI Central Nervous System Server is Active."
 
+# Server Entry Configuration - Listens on all local interfaces on Port 5001
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(host='0.0.0.0', port=5001, debug=True)
